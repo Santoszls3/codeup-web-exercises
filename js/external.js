@@ -14,10 +14,10 @@ alert('Awesome, ' + userFavColor + ' is my favorite color as well!');
 // can Also do this: alert('Cool, ${userFavColor} is my favorite color too!');
 
 
-// This promps the user for the rate they paid for the movie
+// This prompts the user for the rate they paid for the movie
 let movieRate = prompt("What is the movie rate?");
 
-// This prompts the user to imput the amount of days they had the movie for
+// This prompts the user to input the amount of days they had the movie for
 let mDays = prompt("How many days of The Little Meraid?");
 let bDays = prompt("How many days of Brother Bear?");
 let hDays = prompt("How many days of Hercules?");
