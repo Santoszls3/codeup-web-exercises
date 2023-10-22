@@ -8,7 +8,32 @@
  * name as input. This function should return a message which relates to the
  * color stated in the argument of the function. For colors you do not have
  * responses written for, return a string stating so
- *
+ */
+
+/*
+function analyzeColor(color){
+    if(color === "blue"){
+        return `Yes! I love blue.`;
+    } else if(color === "amber"){
+        return `Yes! ${color} is the color of my energy! `;
+    } else if(color === "green"){
+        return `Yuk! ${color} is the color of Broccoli`;
+    } else if(color === "cyan"){
+        return `I don't know anything about cyan.`;
+    } else {
+        return `Nope, ${color} is a weired color. `;
+    }
+}
+console.log(analyzeColor("blue"))
+console.log(analyzeColor("amber"))
+console.log(analyzeColor("green"))
+console.log(analyzeColor("cyan"))
+console.log(analyzeColor("violet"))
+*/
+
+
+
+/**
  * Example:
  *  > analyzeColor('blue') // returns "blue is the color of the sky"
  *  > analyzeColor('red') // returns "Strawberries are red"
@@ -27,7 +52,7 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'amber'];
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
@@ -35,10 +60,68 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+console.log(randomColor)
+console.log(analyzeColor(randomColor));
+
+
+// function analyzeColor(randomColor){
+//     if(randomColor === 'blue'){
+//         return `Yes! I love blue.`;
+//     } else if(randomColor === "amber"){
+//         return `Yes! ${randomColor} is the color of my energy! `;
+//     } else if(randomColor === "green"){
+//         return `Yuk! ${randomColor} is the color of Broccoli`;
+//     } else if(randomColor === "cyan"){
+//         return `I don't know anything about cyan.`;
+//     } else {
+//         return `Nope, ${randomColor} is a weired color. `;
+//     }
+// }
+// console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+/*let analyzeColor = randomColor;
+    switch (randomColor){
+        case "blue":
+            console.log(`Yes! I love blue.`);
+            break
+        case "amber":
+            console.log(`Woo! amber is the color of my energy!`);
+            break
+        case "green":
+            console.log(`Yuk! green is the color of Broccoli`);
+            break
+        case "cyan":
+            console.log(`I don't know anything about cyan.`);
+            break
+        default:
+            console.log(`Nope, ${randomColor} is a weired color.`);
+
+    }*/
+function analyzeColor(color){
+        switch(color){
+            case "blue":
+                alert("blue is the color of the sky");
+                break
+            case "amber":
+                alert("amber is the color of my energy");
+                break
+            case "green":
+                alert("Green is the color of the Grass");
+                break
+            case "cyan":
+                alert("Cyan is the color of the Cyan, lol");
+            default:
+                return "I dont know anything about " + color;
+        }
+}
+console.log(analyzeColor("blue"));
+console.log(analyzeColor("amber"));
+console.log(analyzeColor("cyan"));
+console.log(analyzeColor("green"));
+console.log(analyzeColor("Purple"));
 
 /**
  * TODO:
@@ -46,6 +129,23 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+// let myColor= prompt("what is the color?").toLowerCase();
+//
+// function analyzeMyColor(myColor){
+//     if(myColor === "blue"){
+//         return `Yes! I love blue.`;
+//     } else if(myColor === "amber"){
+//         return `Yes! ${myColor} is the color of my energy! `;
+//     } else if(myColor === "green"){
+//         return `Yuk! ${myColor} is the color of Broccoli`;
+//     } else if(myColor === "cyan"){
+//         return `I don't know anything about cyan.`;
+//     } else {
+//         return `Nope, ${color} is a weired color. `;
+//     }
+// }
+// alert(analyzeMyColor(myColor))
+
 
 /* ########################################################################## */
 
@@ -69,16 +169,43 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+
+
+
+function calculateTotal( luckyNumber, totalAmount){
+    if(luckyNumber === 0){
+        return `sorry no discount, your total is \$${totalAmount}`
+    } else if(luckyNumber === 1) {
+        return `you get %10 discount, your total is /${(totalAmount * .90).toFixed(2)}`;
+    } else if(luckyNumber === 2) {
+        return `you get %25 discount, your total is /${(totalAmount * .75).toFixed(2)}`;
+    } else if(luckyNumber === 3){
+        return `YOu get %35 discount, your total is /${(totalAmount * .65).toFixed(2)}`;
+    } else if(luckyNumber === 4){
+        return` you get %50 discount your total is /${(totalAmount * .50).toFixed(2)}`;
+    } else if(luckyNumber === 5){
+        return `Congratulations! your total is %100 free /${(0).toFixed(2)}`;
+    } else return `You did not receive a discount`
+
+}
+console.log(calculateTotal(0,100))
+console.log(calculateTotal(4, 100))
+console.log(calculateTotal(5, 100))
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
  * (In this line of code, 0 is inclusive, and 6 is exclusive)
- * Prompt the user for their total bill, then use your `calculateTotal` function
+ * Prompt the user for their total bill,
+ * then use your `calculateTotal` function
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// const luckyNumber = Math.floor(Math.random() * 6);
+const luckyNumber = Math.floor(Math.random() * 6);
+
+
+prompt("What is your total bill?")
+alert(calculateTotal(luckyNumber))
 
 /**
  * TODO:
@@ -98,3 +225,58 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+function numberInputOne(){
+    if (confirm("would you like to enter a number")){
+        let userNumber = parseFloat(prompt("What number would you like to enter?"));
+
+            if (!isNaN(userNumber)) {
+                if (userNumber % 2 === 0) {
+                    alert("The number " + userNumber + " is even");
+    } else {
+        alert(`The Number ${userNumber} is odd`);
+    }
+                alert("Your number plus 100=" + (parseFloat(userNumber) + 100));
+                if (userNumber >= 0) {
+                    alert("Your Number " + userNumber + " Is Positive");
+                } else {
+                    alert("Your Number " + userNumber + " Is negative");
+                }
+            } else {
+                alert("You did not enter a number, try again :)");
+            }
+    }
+}
+numberInputOne();
+
+
+// function numberInfo() {
+//
+//     if (confirm("would you like to enter a number?")) {
+//
+//         let userInput = parseFloat(prompt("Enter a number"));
+//
+//
+//         if (!isNaN(userInput)) {
+//             if (userInput % 2 === 0) {
+//                 alert("The number " + userInput + " is even");
+//             } else {
+//                 // alert("The number " + userInput + " is odd");
+//                 alert(`The number ${userInput}  is odd`);
+//             }
+//
+//             alert("The number plus 100 = " + (parseInt(userInput) + 100));
+//
+//             if (userInput >= 0) {
+//                 alert("The number " + userInput + " Is Positive");
+//             } else {
+//                 alert("The number " + userInput + " Is Negative");
+//             }
+//         } else {
+//             alert("You entered something that was not a number, try again!!");
+//         }
+//
+//     }
+// }
+
+
+// numberInfo();
