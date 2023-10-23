@@ -44,3 +44,54 @@ function concatTwo(val1, val2){
     return"" + val1 + val2;
 }
 
+
+
+// 1 Rewrite the following using a for loop:
+// //
+// // var i = 0;
+// // while (i <= 10) {
+// //     console.log(i);
+// //     i++;
+// // }
+// //
+// // Answer:
+// //     for (var i = 0; i <= 10; i++){
+// //         console.log(i);
+// //     }
+
+
+
+//2 What does the following code output?
+//
+//     console.log(10 % 3);
+// 3
+//
+// 3.3333333
+//
+// 0
+//
+// 1   Answer****
+
+// Which of the following will evaluate to TRUE?
+//
+//     0
+//
+//     ""
+//
+// !!true           Answer
+//
+// Both 0 and ""
+
+
+// What is a break used for? What does it do?
+//
+//     Stops the loop from continuing though its iterations     ***** Answer
+//Explanation: after a break is reached, the loop stops and the code below the loop is ran
+//
+
+
+// Skips the rest of the current iteration in a loop
+//
+// skip a specified amount of iterations in a loop
+//
+// None of the above
