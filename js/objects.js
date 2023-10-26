@@ -71,8 +71,8 @@ console.log(person.sayHello());
      //     console.log(name + ' purchased $' + amount + ', ' + (discountedAmount.discount > 0 ? ' received a $' +
      //         discountedAmount.discount + ' discount,' : '') + 'amount due is $' + discountedAmount.totalAfterDiscount );
      //     });
-for (let shoppers of shoppers) {
-    if (shoppeer.amount > 200) {
+for (let shopper of shoppers) {
+    if (shopper.amount > 200) {
         console.log(`Discount Applied`);
     } else {
         console.log(` Sorry, ${shopper.name}. you do not get a  Discount`);
