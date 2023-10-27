@@ -244,8 +244,8 @@ const carOne = {
     }
 }
 const carTwo = {
-    model:"Lexus",
-    color:"turquoise",
+    model:"Toyota",
+    color:"black",
     year: 2023,
 
     drive : function (){
@@ -255,23 +255,55 @@ const carTwo = {
         console.log("You step on the breaks")
     }
 }
-console.log(carTwo.model);
-console.log(carTwo.color);
-console.log(carTwo.year);
+
+const car3 = {
+    model:"Corvette",
+    color:"black",
+    year: 2021,
+
+    drive : function (){
+// The **THIS** keyword, reference to a particular object
+// the object depends on the immediate context
+        console.log(`You drive the ${this.model} `);
+    }
+}
+
+// console.log(carTwo.model);
+// console.log(carTwo.color);
+// console.log(carTwo.year);
 // This gives me access to the objects specific property
 
-car.drive();
-car.break();
+carTwo.drive();
+carTwo.drive();
+car3.drive();
 //If I wanted access to the objects Method this is how you do it, the parentheses invoke it
 
 
-(() =>
-{
-////// Date object
-//this changes a new date object for right now
-    let rightNow = new Date();
-    console.log(rightNow)
 
-    let christmas1998 = new Date("12/25/1998");
-    console.log(christmas1998)
-})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (() =>
+// {
+//  Date object
+// this changes a new date object for right now
+//
+//
+//     let rightNow = new Date();
+//     console.log(rightNow)
+//
+//     let christmas1998 = new Date("12/25/1998");
+//     console.log(christmas1998)
+// })();

@@ -6,7 +6,9 @@
 </head>
 <body>
 
-<form method="POST" action="https://request-inspector.glitch.me/">
+<!--if you do not include an ID it will not let you click on the words to select that option-->
+
+<form method="post" action="https://request-inspector.glitch.me/">
   <label for="email">Email:</label>
   <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
@@ -19,19 +21,21 @@
   <label for="bio">Short Bio:</label>
   <textarea id="bio" name="bio" cols="30" rows="10" placeholder="Tell us about your self!"></textarea>
 
+  <section>
 <h2>How Did you hear about us?</h2>
-  <input type="radio" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" checked><label for="howDidYouHearAboutUsQuestion1">billboard</label><br>
-  <input type="radio" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" checked><label for="howDidYouHearAboutUsQuestion1">radio advertisement</label><br>
-  <input type="radio" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" checked><label for="howDidYouHearAboutUsQuestion1">internet advertisement</label><br>
-  <input type="radio" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" checked><label for="howDidYouHearAboutUsQuestion1">other</label><br>
+  <input type="checkbox" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" value="billboard" checked><label for="howDidYouHearAboutUsQuestion1">billboard</label><br>
+  <input type="checkbox" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" value="radio add" checked><label for="howDidYouHearAboutUsQuestion1">radio advertisement</label><br>
+  <input type="checkbox" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" value="internet add" checked><label for="howDidYouHearAboutUsQuestion1">internet advertisement</label><br>
+  <input type="checkbox" name="howDidYouHearAboutUsQuestion" id="howDidYouHearAboutUsQuestion" value="other" checked><label for="howDidYouHearAboutUsQuestion1">other</label><br>
+  </section>
 
-
+  <section>
   <label for="webBrowser">What web browser are you using?</label>
   <select name="favoriteBroswer" id="webBrowser">
     <option value="chrome">Chrome</option>
-    <option value="firefox">FireFox</option>
+    <option value="firefox">Firefox</option>
     <option value="explorer"> Explorer</option>
-
+  </section>
 
     <input type="submit">
 </form>
