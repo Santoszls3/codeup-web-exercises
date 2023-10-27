@@ -2,5 +2,16 @@ h1 {
     color: purple;
 }
 .Fancy-header{
-    color: darkred;
+    color: #01497c;
+}
+header{
+    text-align: center; text-decoration: underline;
+}
+body{
+    background-color: #a9d6e5;
+}
+
+body {
+    background-image: url('img/TheCanalwithboats.jpg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
 }
