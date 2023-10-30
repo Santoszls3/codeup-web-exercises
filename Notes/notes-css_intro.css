@@ -6,3 +6,104 @@ h1 {
 .Fancy-header{
     color: darkred;
 }
+
+
+
+/*                      ***** selectors and properties *****
+when selecting an element all you need to do is select it for example h1 {}, this just selects the h1
+can use Class: in HTML to distinguish between two different items. we can also use ID
+
+ID is the most specific selector and it will take this over any other selector
+*/
+
+/* Background image, ../IMG/ */
+
+
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+html {
+    background-image: url("../media/groovy-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    background-color: rgba(255, 255, 255, .7);
+    min-height: 100dvh;
+}
+
+#special {
+    font-family: monospace;
+    font-size: 5em;
+    color: seagreen;
+    text-decoration: underline rebeccapurple;
+    text-align: center;
+}
+
+.fancy-header {
+    color: hotpink;
+}
+
+h1.fancy-header {
+    color: cornflowerblue;
+}
+
+h2.fancy-header {
+    color: rgba(0, 0, 255, .2);
+}
+
+h1, p {
+    color: #F46036;
+}
+
+.black-text {
+    color: black;
+}
+
+.indent {
+    text-indent: 45px;
+}
+
+section {
+    text-align: center;
+}
+
+section li {
+    color: #EF0;
+    background-color: black;
+}
+
+section>ul {
+    color: limegreen;
+    background: orangered;
+    list-style: lower-roman;
+}
+
+ul>li {
+    background-color: inherit;
+}
+
+a {
+    transition: .5s;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: red;
+}
+
+a:hover {
+    color: midnightblue;
+    font-size: 32px;
+}
+
+a:active {
+    color: lime;
+    background-color: black;
+}

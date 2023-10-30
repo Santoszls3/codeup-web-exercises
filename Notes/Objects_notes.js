@@ -307,3 +307,6 @@ car3.drive();
 //     let christmas1998 = new Date("12/25/1998");
 //     console.log(christmas1998)
 // })();
+
+// ****** function
+//

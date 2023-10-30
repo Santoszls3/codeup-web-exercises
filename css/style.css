@@ -1,17 +1,43 @@
-h1 {
-    color: purple;
-}
+
 .Fancy-header{
-    color: #01497c;
+    color: black;
+    font-size: 2.5em;
 }
 header{
-    text-align: center; text-decoration: underline;
+    text-align: center; text-decoration: underline; color: whitesmoke;
+}
+p{
+    text-align: center; font-size: 1.1em;
 }
 body{
-    background-color: #a9d6e5;
+
+    background-image: url("../IMG/oceanbkground.jpg");
+    background-size: cover;
 }
 
-body {
-    background-image: url('img/TheCanalwithboats.jpg'); /* Replace 'background.jpg' with the path to your image */
+section.core {
+    background-image: url("../IMG/croppedcanal.jpg");
+    ); /* Replace 'background.jpg' with the path to your image */
     background-size: cover; /* Ensures the image covers the entire background */
+    -webkit-text-fill-color: #a9d6e5;/* this changes the color of the h3s i put on my HTML and
+     the color of the text in the UL and li */
+    background-position: center;
+}
+section.companyVision{
+    background-image: url("../IMG/Sectiotwocolors.jpg");
+    background-size: cover;
+}
+section li {
+    color: #a9d6e5; /* this changes teh color of the bullets on your li */
+}
+
+
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active*/
+a {
+    transition: .5s;
+    text-decoration: none;
+}
+a:hover {
+    color: coral;
+    font-size: 32px;
 }
