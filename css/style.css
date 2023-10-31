@@ -1,4 +1,7 @@
 
+@import url('https://fonts.google.com/specimen/Dancing+Script');
+
+
 .Fancy-header{
     color: black;
     font-size: 2.5em;
@@ -6,8 +9,16 @@
 header{
     text-align: center; text-decoration: underline; color: whitesmoke;
 }
+.highlight {
+    color:#8f250c ; /* Change to the desired color */
+}
+span{
+    font-family: 'Dancing Script', sans-serif;
+}
 p{
-    text-align: center; font-size: 1.1em;
+    text-align: center; font-size: 20px;
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: bold;
 }
 body{
 

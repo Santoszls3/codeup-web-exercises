@@ -1,5 +1,5 @@
 /* selector for id="container" */
-container {
+#container {
     margin: 50px auto;
     width: 500px;
     padding: 10px;
@@ -8,7 +8,7 @@ container {
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
-h1 {
+#container h1 {
     color: blue;
     text-decoration: underline;
 }
