@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body {
+    margin: auto;
+
+}
+nav {
+    background: #BABABA;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+ul {
+    list-style: none;
+    margin: auto;
+    padding: 1px;
+    display: flex;
+
+}
+
+.logo>a {
+    padding: 0;
+}
+
+.logo {
+
+    padding: .2em;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 1em;
+
+}
+
+.left-nav{
+    al
+}
+
+
+nav a:hover {
+    color: blue;
+}
