@@ -1,3 +1,5 @@
+
+
 h1 {
     background-color: white;
 
@@ -13,12 +15,20 @@ h1 {
     align-items: center;
 
 }
+
+
 legend {
     background-color: dodgerblue;
     color: white;
 }
 
-#\ sizeCrust{
-    display: flex;
-    width: 100%;
-}
+
+/*.btn-primary {*/
+/*    : flex-end;*/
+/*}*/
+/*fieldset {*/
+/*    padding: 0 0 0 50px;*/
+/*}*/
+/*.nav-tabs {*/
+/*    padding: 0 0 0 50px;*/
+/*}*/
