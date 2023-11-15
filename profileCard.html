@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Attributes and CSS Exercise</title>
+    <link rel="stylesheet" type="text/css" href="css/attributes-style.css">
+</head>
+<body>
+<div id="profile-card">
+    <img id="profile-pic" src="https://via.placeholder.com/150" alt="Profile Picture">
+    <h2 id="profile-name">John Doe</h2>
+    <p id="profile-desc">This is a sample description text for a profile card. JavaScript will be used to manipulate this card.</p>
+</div>
+<button id="toggle-btn">Toggle Background</button>
+
+<!--Javascript updates-->
+<!--Two seconds after the page loads, change the "profile-pic" src attribute to a different image.-->
+<script>
+
+    var pictureTimer = 2;
+    function updateTimer() {
+        if (pictureTimer == 0) {
+            document.getElementsByClassName('#profile-pic') = <img src=\"IMG/Cow.jpg\" height=\"4032\" width=\"3024\"/>
+
+        }
+
+    }
+const intervalId = setInterval(updateTimer, 1000);
+
+</script>
+
+
+
+
+<script src="js/attributes-script.js"></script>
+</body>
+</html>

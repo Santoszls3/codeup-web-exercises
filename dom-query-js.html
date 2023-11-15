@@ -38,15 +38,24 @@
             subHeader.style.color = "blue";
         // TODO: Uncomment the next line and get all list items
         const listItems = document.getElementsByTagName('li');
+        // can also do document.querySelectorAll("li");
 
         // TODO: Set text color on every other list item to grey
             for (let i = 0; i < listItems.length; i++){
-                if(i%2 !== 0){
+                if(i % 2 !== 0){
                     listItems[i].style.color = "grey"
                 }
+                // can also do    if(listItems[i].dataset.dbid === "1"){
+                //     listItems[i].style.color = "blue"
+                // }
             }
+             // i=0 because arrays start at 0 index
+
+
         // TODO: Set text color of li with dbid = 1 to blue
             listItems[0].style.color = "blue";
+        //Can also do      document.querySelector('li[data-dbid="1"]').style.color = 'blue';
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
          const subParagraphs = document.querySelectorAll(".sub-paragraph");
 
@@ -55,6 +64,7 @@
         for (let sub of subParagraphs) {
             sub.innerText = 'Mission Accomplished!'
         }
+        // can also do subParagraphs[0].innerText = "Mission Accomplished"
 
 
 </script>
