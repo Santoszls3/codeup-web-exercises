@@ -85,7 +85,7 @@ function concatTwo(val1, val2){
 
 // What is a break used for? What does it do?
 //
-//     Stops the loop from continuing though its iterations     ***** Answer
+//     Stops the loop from continuing through its iterations     ***** Answer
 //Explanation: after a break is reached, the loop stops and the code below the loop is ran
 //
 
