@@ -3,6 +3,7 @@
 <head>
     <title>Attributes and CSS Exercise</title>
     <link rel="stylesheet" type="text/css" href="css/attributes-style.css">
+
 </head>
 <body>
 <div id="profile-card">
@@ -12,25 +13,16 @@
 </div>
 <button id="toggle-btn">Toggle Background</button>
 
-<!--Javascript updates-->
-<!--Two seconds after the page loads, change the "profile-pic" src attribute to a different image.-->
-<script>
-
-    var pictureTimer = 2;
-    function updateTimer() {
-        if (pictureTimer == 0) {
-            document.getElementsByClassName('#profile-pic') = <img src=\"IMG/Cow.jpg\" height=\"4032\" width=\"3024\"/>
-
-        }
-
-    }
-const intervalId = setInterval(updateTimer, 1000);
-
-</script>
-
-
 
 
 <script src="js/attributes-script.js"></script>
+
+
+<!--Notes
+if you try to access an attribute that does not exist in HTML you will get null
+
+The value of an attribute is always a STRING,
+-->
+
 </body>
 </html>
