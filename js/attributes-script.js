@@ -27,8 +27,8 @@ setTimeout(() => document.querySelector("#profile-name").innerText = "Mr. Cowen"
 // setTimeout(function () {
 //     var profileDesc = document.getElementById("profile-desc");
 //     if (profileDesc) {
-//         profileDesc.style.color = "blue";   // Change color to blue
-//         profileDesc.style.fontFamily = "Dancing Script";  // Change font family
+//         profileDesc.style.color = "blue";   **** this Changes color to blue
+//         profileDesc.style.fontFamily = "Dancing Script";  **** this Changes font family
 //     }
 // }, 6000);
 setTimeout(() => document.querySelector("#profile-desc").classList.add("blue1"), 6000);
@@ -48,3 +48,5 @@ setTimeout(() => document.querySelector("#profile-desc").classList.add("blue1"),
 // }, 2000);
 
 setInterval(() => {document.querySelector("#profile-card").classList.toggle("funky")}, 2000)
+// note how the { is used in this case starting in front of the docuent.querySelector, and does not end till funky.
+// Funky is set in the CSS, a

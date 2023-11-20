@@ -24,13 +24,23 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+<!--if you put buttons in a form and  you dont want the buttons to immediately submit the form, you will need to use
+(e) => {
+e.preventDefault();
+} to allow the changed to remain on the page.
+
+ <button type=‘button’>No need to prevent default</button>
+
+<button type=‘submit’>Need to prevent default</button-->
+
 <button id="cool-btn">Cool</button>
 <button id="blue-btn">Blue</button>
 <button id="pink-btn">Pink</button>
 <button id="1st-btn">1st Blue</button>
 
 <script>
-        // "use strict";
+         "use strict";
         // // TODO: Uncomment next line and get the main header element by id
         //  const mainHeader = document.getElementById('main-header');
         //
@@ -74,53 +84,93 @@
 // The above was before the buttons were added ****************
 
 
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        const mainHeader = document.getElementById('main-header');
-
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        document.getElementById("cool-btn").addEventListener("click", function (){
-        mainHeader.innerHTML = "JavaScript is cool";
-        });
-        // TODO: Uncomment the next line and get the sub header element by id
-        const subHeader = document.getElementById('sub-header');
-
-        // TODO: Set the text color of subHeader to blue
-        document.getElementById("blue-btn").addEventListener("click", function (){
-            subHeader.style.color = "blue";
-        });
-
-        // TODO: Uncomment the next line and get all list items
-        const listItems = document.getElementsByTagName('li');
-        // can also do document.querySelectorAll("li");
-
-        // TODO: Set text color on every other list item to grey
-        document.getElementById("pink-btn").addEventListener("click", function (){
-        for (let i = 0; i < listItems.length; i++){
-            if(i % 2 !== 0){
-                listItems[i].style.color = "pink"
-            }
 
 
-        }
+// Below is how we added buttons to make those changes with buttons
 
-        });
+        // // TODO: Uncomment next line and get the main header element by id
+        // const mainHeader = document.getElementById('main-header');
+        //
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // document.getElementById("cool-btn").addEventListener("click", function (){
+        // mainHeader.innerHTML = "JavaScript is cool";
+        // });
+        // document.getElementById("cool-btn").addEventListener("dblclick", function (){
+        //     mainHeader.innerHTML = "JavaScript is SUPER COOL! 😎";
+        // });
+        // // TODO: Uncomment the next line and get the sub header element by id
+        // const subHeader = document.getElementById('sub-header');
+        //
+        // // TODO: Set the text color of subHeader to blue
+        // document.getElementById("blue-btn").addEventListener("click", function (){
+        //     subHeader.style.color = "blue";
+        // });
+        //
+        // // TODO: Uncomment the next line and get all list items
+        // const listItems = document.getElementsByTagName('li');
+        // // can also do document.querySelectorAll("li");
+        //
+        // // TODO: Set text color on every other list item to grey
+        // document.getElementById("pink-btn").addEventListener("click", function (){
+        // for (let i = 0; i < listItems.length; i++){
+        //     if(i % 2 !== 0){
+        //         listItems[i].style.color = "pink"
+        //     }
+        //
+        //
+        // }
+        //
+        // });
+        //
+        // // TODO: Set text color of li with dbid = 1 to blue
+        // document.getElementById("1st-btn").addEventListener("click", function (){
+        // listItems[0].style.color = "blue";
+        // });
+        // //Can also do      document.querySelector('li[data-dbid="1"]').style.color = 'blue';
+        //
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // const subParagraphs = document.querySelectorAll(".sub-paragraph");
+        //
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // for (let sub of subParagraphs) {
+        //     sub.innerText = 'Mission Accomplished!'
+        // }
+        // // can also do subParagraphs[0].innerText = "Mission Accomplished"
 
-        // TODO: Set text color of li with dbid = 1 to blue
-        document.getElementById("1st-btn").addEventListener("click", function (){
-        listItems[0].style.color = "blue";
-        });
-        //Can also do      document.querySelector('li[data-dbid="1"]').style.color = 'blue';
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        const subParagraphs = document.querySelectorAll(".sub-paragraph");
 
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        for (let sub of subParagraphs) {
-            sub.innerText = 'Mission Accomplished!'
-        }
-        // can also do subParagraphs[0].innerText = "Mission Accomplished"
+        // ******************** New Line **********************
+
+
+
+
+         // Add code that will change the background color of an h1 element when clicked.
+
+         document.querySelector('h1').addEventListener('click', (event) => {
+             // Change the background color of the h1 element when clicked
+             event.target.style.backgroundColor = 'Blue';
+         });
+         // can also do:
+         // const h1s = document.querySelectorAll("h1");
+         // for (let h1 of h1s) {
+         //     h1.addEventListener("click", () => {
+         //         event.target.style.backgroundColor = "blue";
+         //     })
+         // }
+
+
+         document.querySelector('p').addEventListener('dblclick', (event) => {
+             // Change the font size of paragraph when double clicked
+             event.target.style.fontSize = '18px';
+         });
+
+         document.querySelector('li').addEventListener('mouseover', (event) => {
+             // Change the color of 1st li when hovered over
+             event.target.style.color = 'red';
+         });
+
+
 
 
 </script>

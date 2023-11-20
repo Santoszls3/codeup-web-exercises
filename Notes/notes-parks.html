@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parks</title>
+
+</head>
+<body>
+
+<h1>National Parks FAQ</h1>
+
+<dl>
+  <dt>How many people visit the national parks?</dt>
+  <dd>Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+
+  <dt>How old is the National Park System?</dt>
+  <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+
+  <dt>How many employees are in the National Park Service?</dt>
+  <dd>Permanent, temporary, and seasonal employees: More than 20,000</dd>
+
+  <dt>What is the origin of the National Park Service arrowhead?</dt>
+  <dd>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on
+    July 20, 1951.
+  </dd>
+
+  <dt>How many areas are in the National Park System?</dt>
+  <dd>The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia,
+    American Samoa, Guam, Puerto Rico, and the Virgin Islands.
+  </dd>
+
+  <dt>What is the largest national park site?</dt>
+  <dd>Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+
+  <dt>What is the National Park Service budget?</dt>
+  <dd>Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
+
+  <dt>Can I bring my pet to a national park?</dt>
+  <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging
+    facilities.
+  </dd>
+
+  <dt>How do I apply for a job with the National Park Service?</dt>
+  <dd>National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
+
+  <dt>What do I need to know about driving off-road in national parks?</dt>
+  <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road
+    driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.
+  </dd>
+</dl>
+
+<!-- ADDED HTML FOR DOM TRAVERSAL EXERCISE -->
+
+<h3>Glacier National Park</h3>
+<ul>
+  <li>Location and Size: Glacier National Park is located in the U.S. state of Montana, along the border with Canada.
+    It covers an area of over 1 million acres (4,000 square kilometers) and is part of the larger Waterton-Glacier
+    International Peace Park, a UNESCO World Heritage Site.
+  </li>
+
+  <li>Glaciers and Peaks: The park is known for its stunning alpine landscapes, rugged mountains, and numerous
+    glaciers. However, due to climate change, the number of glaciers in the park has decreased significantly over
+    the years. The park is home to towering peaks, including the famous Going-to-the-Sun Mountain.
+  </li>
+
+  <li>Going-to-the-Sun Road: This iconic road is a engineering marvel that cuts through the heart of the park,
+    offering breathtaking views of the surrounding landscape. The road spans approximately 50 miles (80 kilometers)
+    and crosses the Continental Divide at Logan Pass.
+  </li>
+
+  <li>Biodiversity: Despite its harsh climate and high elevation, Glacier National Park is home to diverse ecosystems.
+    It provides habitat for a variety of wildlife, including grizzly bears, mountain goats, bighorn sheep, and more.
+    The park's ecosystems range from subalpine forests to alpine tundra.
+  </li>
+</ul>
+
+<h3>Lassen Volcanic National Park</h3>
+<ul>
+  <li>Volcanic Wonders: Lassen Volcanic National Park is located in Northern California, USA, and is known for its
+    remarkable volcanic activity. It features a variety of geothermal features such as hot springs, fumaroles, and
+    boiling mud pots, showcasing the area's volcanic history.
+  </li>
+
+  <li>Lassen Peak: The park's namesake, Lassen Peak, is one of the world's largest plug dome volcanoes and the
+    southernmost volcano in the Cascade Range. It last erupted between 1914 and 1917, and its explosive activity
+    significantly altered the landscape.
+  </li>
+
+  <li>Bumpass Hell: Bumpass Hell is one of the park's most famous hydrothermal areas. Visitors can hike to this area
+    to see colorful and steaming hot springs, as well as the iconic turquoise Bumpass Hell pond.
+  </li>
+
+  <li>Wildlife and Nature: Lassen National Park is home to diverse flora and fauna, ranging from coniferous forests to
+    alpine meadows. Wildlife in the park includes black bears, mule deer, and a variety of bird species. The park
+    offers numerous hiking trails that allow visitors to explore these natural wonders.
+  </li>
+</ul>
+
+<h3>Arches National Park</h3>
+<ul>
+  <li>Unique Sandstone Arches: Arches National Park, located in southeastern Utah, USA, is renowned for its more than
+    2,000 natural stone arches. These arches are formed by erosion over millions of years and come in various sizes
+    and shapes, making the park a captivating geological wonder.
+  </li>
+
+  <li>Delicate Arch: One of the park's most iconic landmarks is Delicate Arch, an isolated arch that has become a
+    symbol of Utah. It's a popular spot for hikers and photographers, and it's particularly stunning during sunrise
+    and sunset.
+  </li>
+
+  <li>Landscape and Erosion: The park's landscape is dominated by striking red rock formations, fins, and balanced
+    rocks. The unique geological processes that have shaped the area include erosion, weathering, and the natural
+    arch formation that the park is named after.
+  </li>
+
+  <li>Ancient History: While the park is known for its natural features, it also holds a rich cultural history. The
+    area was inhabited by various Native American cultures over thousands of years. Petroglyphs and other evidence
+    of their presence can be found throughout the park.
+  </li>
+</ul>
+
+<button id="btn-last-items-yellow">Make Last List Items Yellow</button>
+
+<script>
+  "use strict";
+
+  // 3. Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+  document.querySelector('#btn-last-items-yellow').addEventListener('click', () => {
+    const uls= document.querySelectorAll('ul');
+    for (const ul of uls) {
+      ul.lastElementChild.style.backgroundColor = 'yellow';
+    }
+  });
+
+  // 4. When any h3 is clicked, the lis underneath it should have a fontWeight of "bold".
+  const h3s = document.querySelectorAll('h3');
+  for (const h3 of h3s) {
+    h3.addEventListener('click',(e) => {
+      e.currentTarget.nextElementSibling.style.fontWeight = 'bold';
+    })
+  }
+
+  // 5. When any list item is clicked, the first li of that list item's parent ul should have a font color of blue.
+
+  const lis = document.querySelectorAll('li');
+  for (const li of lis) {
+    li.addEventListener('click', (e) => {
+      e.currentTarget.parentElement.firstElementChild.style.color = 'blue';
+    });
+  }
+
+
+</script>
+</body>
+</html>
