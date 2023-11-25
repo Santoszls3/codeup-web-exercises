@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Santos & Yadriel Coffee House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="n-css/coffee.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Unna&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<img src="n-img/coffee. jpg" height="2432" width="1664"/>
+<header>
+    <h2><em>Coffee!</em></h2>
+</header>
+
+<!-- **** Nav section **** -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <form class="filter-form">
+            <label for="roast-selection">Select Roast:</label>
+            <select id="roast-selection">
+                <option>All</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+
+            <label for="coffee-search">Search by Name:</label>
+            <input type="text" id="coffee-search" name="search" placeholder="Search by coffee name">
+            <!--        <input id="submit" type="submit" />-->
+        </form>
+        <form id="add-coffee-form" class="add-form">
+            <label for="add-coffee-name"> Add a Coffee!</label>
+            <input type="text" id="add-coffee-name" name="add-coffee-name" placeholder="Name" required>
+            <label for="add-coffee-roast">Select Roast:</label>
+            <select id="add-coffee-roast">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+            <input type="submit" value="Add Coffee">
+        </form>
+    </div>
+</nav>
+
+
+<div class="row">
+    <aside id="coffees" class="coffee-list col-6">
+
+    </aside>
+
+
+    <!--   ***** interactive Coffee ******  -->
+
+    <footer class="col-6">
+        <div class="options">
+            <button id="americano">Americano</button>
+            <button id="au_lait">Au lait</button>
+            <button id="capuccino">Capuccino</button>
+            <button id="corretto">Corretto</button>
+            <button id="espresso">Espresso</button>
+            <button id="latte">Latte</button>
+            <button id="lungo">Lungo</button>
+            <button id="macchiato">Macchiato</button>
+            <button id="mocha">Mocha</button>
+            <button id="ristretto">Ristretto</button>
+        </div>
+        <div class="container">
+            <h1 class="coffee_name">Choose your coffee</h1>
+            <div class="cup">
+                <div class="filling reset">
+                    <div class="coffee">Coffee</div>
+                    <div class="water">Water</div>
+                    <div class="liquor">Liquor</div>
+                    <div class="milk">Milk</div>
+                    <div class="whipped_cream">Whipped cream</div>
+                    <div class="milk_foam">Milk foam</div>
+                    <div class="steamed_milk">Steamed milk</div>
+                    <div class="chocolate">Chocolate</div>
+                </div>
+                <div class="plate"></div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="main.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -20,6 +20,8 @@
                 <div class="d-grid"><button class="btn btn-secondary mt-3 add">Add To-Do</button></div>
             </form>
         </section>
+
+<!--         ****** todo list ******-->
         <section class="my-4 my-lg-0 col-lg-8">
             <h3>To-Dos:</h3>
             <ul class="list-group" id="to-do-list">
@@ -35,7 +37,7 @@
     // Event Listener: This line adds an event listener to the form
     // with the id 'to-do-form'. The event being listened for is the
     // form click event (click).
-    document.querySelector('#to-do-form').addEventListener('click', (e) => {
+    document.querySelector('#to-do-form').addEventListener('submit', (e) => {
         e.preventDefault();
         const listItemText = document.querySelector('#to-do').value;
 
