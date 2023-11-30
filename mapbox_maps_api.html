@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mapbox Lecture</title>
+    <title>Mapbox Restaurants</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
 </head>
@@ -16,29 +16,76 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
         center: [-98.4946, 29.4252], // starting position [lng, lat]
-        zoom: 4, // starting zoom
+        zoom: 9, // starting zoom
     });
 
     map.addControl(new mapboxgl.NavigationControl());
 
-    geocode("8700 Tesoro Drive, San Antonio, TX 78217", MB_KEY).then(coords => {
+    geocode("6362 De Zavala Rd #108, San Antonio, TX 78249", MB_KEY).then(coords => {
         const marker = new mapboxgl.Marker()
             .setLngLat(coords)
             .addTo(map);
 
-        const codeupPopup = new mapboxgl.Popup()
-            .setHTML("<p>Welcome to our San Antonio campus!</p>");
+        const areTeaPopup = new mapboxgl.Popup()
+            .setHTML("<p>Welcome to Artea!</p>");
 
         marker.setPopup(codeupPopup);
     });
 
-    geocode("1214 N Chaparral St, Corpus Christi, TX 78401", MB_KEY).then(coords => {
+    geocode("1014 S Alamo St, San Antonio, TX 78210", MB_KEY).then(coords => {
+        const marker = new mapboxgl.Marker()
+            .setLngLat(coords)
+            .addTo(map);
+
+        const hotJoyPopup = new mapboxgl.Popup()
+            .setHTML("<p>Welcome to HOT JOY!</p>");
+
+        marker.setPopup(hotJoyPopup);
+    });
+
+    geocode("6362 De Zavala Rd #108, San Antonio, TX 78249", MB_KEY).then(coords => {
         console.log(coords);
         let popup = new mapboxgl.Popup()
             .setLngLat(coords)
-            .setHTML("<p>Railroad Seafood & Brewery</p>")
+            .setHTML("<p>ArTea!</p>")
             .addTo(map);
     });
+
+
+    // Array of restaurant objects
+    const restaurants = [
+        {
+            name: "Codeup",
+            address: "8700 Tesoro Drive, San Antonio, TX 78217",
+            popupContent: "<p>Welcome to our San Antonio campus!</p>"
+        },
+        {
+            name: "Hot Joy",
+            address: "1014 S Alamo St, San Antonio, TX 78210",
+            popupContent: "<p>Welcome to HOT JOY!</p>"
+        },
+        {
+            name: "ArTea",
+            address: "6362 De Zavala Rd #108, San Antonio, TX 78249",
+            popupContent: "<p>ArTea!</p>"
+        }
+    ];
+
+    // Display restaurants on the map
+    restaurants.forEach(restaurant => {
+        geocode(restaurant.address, MB_KEY).then(coords => {
+            const marker = new mapboxgl.Marker()
+                .setLngLat(coords)
+                .addTo(map);
+
+            const popup = new mapboxgl.Popup()
+                .setHTML(restaurant.popupContent);
+
+            marker.setPopup(popup);
+        });
+    });
+
+
 </script>
 </body>
 </html>
