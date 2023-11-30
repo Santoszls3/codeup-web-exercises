@@ -32,11 +32,11 @@
         marker.setPopup(codeupPopup);
     });
 
-    geocode("900 Jackson St Unit 410, Dallas, TX 75202", MB_KEY).then(coords => {
+    geocode("1214 N Chaparral St, Corpus Christi, TX 78401", MB_KEY).then(coords => {
         console.log(coords);
         let popup = new mapboxgl.Popup()
             .setLngLat(coords)
-            .setHTML("<p>Codeup Rocks!</p>")
+            .setHTML("<p>Railroad Seafood & Brewery</p>")
             .addTo(map);
     });
 </script>
