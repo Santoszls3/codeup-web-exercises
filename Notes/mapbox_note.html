@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<div id='map' style='width: 80vw; height: 50vh; margin: auto'></div>
+<script src="js/keys.js"></script>
+<script src="js/mapbox_geocode_utilis.js"></script>
+<script>
+    mapboxgl.accessToken = MB_KEY
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+
+    });
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+
+    geocode("8700 Tesoro Drive, San Antonio, TX 78217", MB_KEY).then(coords =>{
+        const marker = new mapboxgl.Marker()
+            .setLngLat(coords)
+            .addTo(map);
+
+
+
+    })
+
+
+</script>
+</body>
+</html>
