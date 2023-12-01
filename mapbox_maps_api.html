@@ -8,6 +8,10 @@
 </head>
 <body>
 <div id='map' style='width: 80vw; height: 50vh; margin: auto'></div>
+
+
+
+
 <script src="js/keys.js"></script>
 <script src="js/mapbox_geocode_utilis.js"></script>
 <script>
@@ -20,6 +24,7 @@
     });
 
     map.addControl(new mapboxgl.NavigationControl());
+
 
     geocode("6362 De Zavala Rd #108, San Antonio, TX 78249", MB_KEY).then(coords => {
         const marker = new mapboxgl.Marker()
@@ -52,38 +57,97 @@
     });
 
 
-    // Array of restaurant objects
-    const restaurants = [
-        {
-            name: "Codeup",
-            address: "8700 Tesoro Drive, San Antonio, TX 78217",
-            popupContent: "<p>Welcome to our San Antonio campus!</p>"
-        },
-        {
-            name: "Hot Joy",
-            address: "1014 S Alamo St, San Antonio, TX 78210",
-            popupContent: "<p>Welcome to HOT JOY!</p>"
-        },
-        {
-            name: "ArTea",
-            address: "6362 De Zavala Rd #108, San Antonio, TX 78249",
-            popupContent: "<p>ArTea!</p>"
-        }
-    ];
 
-    // Display restaurants on the map
-    restaurants.forEach(restaurant => {
-        geocode(restaurant.address, MB_KEY).then(coords => {
-            const marker = new mapboxgl.Marker()
-                .setLngLat(coords)
-                .addTo(map);
 
-            const popup = new mapboxgl.Popup()
-                .setHTML(restaurant.popupContent);
+    // function convertTime() {
+    //
+    // }
 
-            marker.setPopup(popup);
+    // const lat = 29.4260;
+    // const lon = -98.4861;
+    // fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         // 3 hours 3 x 8 = 24
+    //
+    //         for (let i = 0; i < data.list.length; i += 8) {
+    //           console.log(data.list[i].main.pressure);
+    //         }
+    //         // 1003 for pressure
+    //     })
+    //     .catch((e) => {
+    //       console.error(e);
+    //     });
+
+
+    // Searching by City
+    const city = 'Paris';
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${WM_Key}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.list[0].dt);
+            console.log(new Date(data.list[0].dt * 1000).toDateString())
+        })
+        .catch((e) => {
+            console.error(e);
         });
-    });
+
+
+    // Customize the response with units
+    // const city = 'Whitefish, TX, US';
+    // const units = 'imperial';
+    // fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${WEATHER_API_KEY}&units=${units}`)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data);
+    //     })
+    //     .catch((e) => {
+    //         console.error(e);
+    //     });
+
+
+
+    // Can format timestamp with new Date(forecast.dt * 1000).toDateString()
+
+
+
+
+    // // Array of restaurant objects
+    // const restaurants = [
+    //     {
+    //         name: "Codeup",
+    //         address: "8700 Tesoro Drive, San Antonio, TX 78217",
+    //         popupContent: "<p>Welcome to our San Antonio campus!</p>"
+    //     },
+    //     {
+    //         name: "Hot Joy",
+    //         address: "1014 S Alamo St, San Antonio, TX 78210",
+    //         popupContent: "<p>Welcome to HOT JOY!</p>"
+    //     },
+    //     {
+    //         name: "ArTea",
+    //         address: "6362 De Zavala Rd #108, San Antonio, TX 78249",
+    //         popupContent: "<p>ArTea!</p>"
+    //     }
+    // ];
+    //
+    //
+    //
+    // // Display restaurants on the map
+    // restaurants.forEach(restaurant => {
+    //     geocode(restaurant.address, MB_KEY).then(coords => {
+    //         const marker = new mapboxgl.Marker()
+    //             .setLngLat(coords)
+    //             .addTo(map);
+    //
+    //         const popup = new mapboxgl.Popup()
+    //             .setHTML(restaurant.popupContent);
+    //
+    //         marker.setPopup(popup);
+    //     });
+    // });
 
 
 </script>
