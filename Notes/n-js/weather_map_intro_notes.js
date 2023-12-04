@@ -121,6 +121,12 @@ function updateFiveDayForecast(weatherData) {
     }
 }
 
+[
+    "weather",
+    "temp"
+    'humidity'
+]
+
 
 
 

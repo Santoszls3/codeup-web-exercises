@@ -46,3 +46,7 @@ body{
     height: 60px;
     cursor: pointer;
 }
+
+.weather-icon{
+    width: 15em;
+}
