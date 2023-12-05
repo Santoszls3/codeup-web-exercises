@@ -6,18 +6,20 @@ const map = new mapboxgl.Map({
     zoom: 9
 });
 
-// Section: Default Marker Initialization
+
+
+// Default Marker Initialization
 const marker = new mapboxgl.Marker({ draggable: true })
     .setLngLat([-98.4946, 29.4252])
     .addTo(map);
 
-// Section: Update Weather Forecast Function
+// Update Weather Forecast Function
 function updateWeatherForecast(location) {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${WM_Key}&units=imperial`)
         .then(response => response.json())
         .then(forecastData => {
             console.log('Weather Forecast Data:', forecastData);
-
+            // Iterate over the next 5 days of forecast data
             for (let i = 0; i < 5; i++) {
                 const forecastEntry = forecastData.list[i * 8];
                 const card = document.getElementById(`day-${i + 1}`);
@@ -34,7 +36,7 @@ function updateWeatherForecast(location) {
         });
 }
 
-// Section: Event Listener for Submitting Search Form
+// Event Listener for Submitting Search Form
 document.getElementById('search-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const location = document.getElementById('search-input').value;

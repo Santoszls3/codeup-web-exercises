@@ -23,5 +23,15 @@ header {
     padding: 10px;
     border: 1px solid #ddd;
 }
+.card{
+    width: 18rem
+}
+
+
+#map{
+    width: 80vw;
+    height: 50vh;
+    margin: auto;
+}
 
 
