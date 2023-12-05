@@ -1,3 +1,5 @@
+
+
 mapboxgl.accessToken = MB_KEY;
 const map = new mapboxgl.Map({
     container: 'map',
