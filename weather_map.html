@@ -7,15 +7,17 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
-  <link href="css/weather_map.css" rel="stylesheet">
+  <link href="css/weather_map2.css" rel="stylesheet">
 
 </head>
 <body>
-
+<!-- *************************************************      Header-->
 <header class="bg-primary" >Weather App</header>
 
 
-<!--**************************************** NAV-->
+
+
+<!-- *************************************************      Nav-->
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand">Location</a>
@@ -26,84 +28,100 @@
   </div>
 </nav>
 
-<!-- ***********************  Cards *************************-->
 
+
+
+
+
+
+<!-- *************************************************      Cards-->
 <section id="Card section" class="forecast-container">
-<div class="card" style="width: 18rem;"> <!--first day-->
-  <div class="card-header">
-    Date:
+
+  <!-- Day 1 -->
+  <div class="card" id="day-1" style="width: 18rem;">
+    <div class="card-header">
+      <span id="day-1-date">Date:</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item city">City: </li>
+      <li class="list-group-item temp">Temperature: </li>
+      <li class="list-group-item description">Description: </li>
+      <li class="list-group-item humidity">Humidity: </li>
+      <li class="list-group-item wind">Wind: </li>
+    </ul>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="bi bi-thermometer"></i></i>temp: high - low</li>
-    <li class="list-group-item"><i class="bi bi-cloud-sun"></i>description</li>
-    <li class="list-group-item"><i class="bi bi-moisture"></i>humidity</li>
-    <li class="list-group-item"><i class="bi bi-wind"></i>wind</li>
 
-  </ul>
-</div>
-
-
-<div class="card cardsTwoToFive" style="width: 18rem;"> <!--second day-->
-  <div class="card-header">
-    Date:
+  <!-- Day 2 -->
+  <div class="card" id="day-2" style="width: 18rem;">
+    <div class="card-header">
+      <span id="day-2-date">Date:</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item city">City: </li>
+      <li class="list-group-item temp">Temperature: </li>
+      <li class="list-group-item description">Description: </li>
+      <li class="list-group-item humidity">Humidity: </li>
+      <li class="list-group-item wind">Wind: </li>
+    </ul>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="bi bi-thermometer"></i>temp: high - low</li>
-    <li class="list-group-item"><i class="bi bi-cloud-sun"></i>description</li>
-    <li class="list-group-item"><i class="bi bi-moisture"></i>humidity</li>
-    <li class="list-group-item"><i class="bi bi-wind"></i>wind</li>
-  </ul>
-</div>
 
-<div class="card cardsTwoToFive" style="width: 18rem;"> <!--third day-->
-  <div class="card-header">
-    Date:
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="bi bi-thermometer"></i>temp: high - low</li>
-    <li class="list-group-item"><i class="bi bi-cloud-sun"></i>description</li>
-    <li class="list-group-item"><i class="bi bi-moisture"></i>humidity</li>
-    <li class="list-group-item"><i class="bi bi-wind"></i>wind</li>
-  </ul>
-</div>
 
-<div class="card cardsTwoToFive" style="width: 18rem;"> <!--fourth day-->
-  <div class="card-header">
-    Date:
+  <!-- Day 3 -->
+  <div class="card" id="day-3" style="width: 18rem;">
+    <div class="card-header">
+      <span id="day-3-date">Date:</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item city">City: </li>
+      <li class="list-group-item temp">Temperature: </li>
+      <li class="list-group-item description">Description: </li>
+      <li class="list-group-item humidity">Humidity: </li>
+      <li class="list-group-item wind">Wind: </li>
+    </ul>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="bi bi-thermometer"></i>temp: high - low</li>
-    <li class="list-group-item"><i class="bi bi-cloud-sun"></i>description</li>
-    <li class="list-group-item"><i class="bi bi-moisture"></i>humidity</li>
-    <li class="list-group-item"><i class="bi bi-wind"></i>wind</li>
-  </ul>
-</div>
 
-<div class="card cardsTwoToFive" style="width: 18rem;"> <!--fifth day-->
-  <div class="card-header">
-    Date:
+
+  <!-- Day 4 -->
+  <div class="card" id="day-4" style="width: 18rem;">
+    <div class="card-header">
+      <span id="day-4-date">Date:</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item city">City: </li>
+      <li class="list-group-item temp">Temperature: </li>
+      <li class="list-group-item description">Description: </li>
+      <li class="list-group-item humidity">Humidity: </li>
+      <li class="list-group-item wind">Wind: </li>
+    </ul>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="bi bi-thermometer"></i>temp: high - low</li>
-    <li class="list-group-item"><i class="bi bi-cloud-sun"></i>description</li>
-    <li class="list-group-item"><i class="bi bi-moisture"></i>humidity</li>
-    <li class="list-group-item"><i class="bi bi-wind"></i>wind</li>
-  </ul>
-</div>
+
+
+
+  <!-- Day 5 -->
+  <div class="card" id="day-5" style="width: 18rem;">
+    <div class="card-header">
+      <span id="day-5-date">Date:</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item city">City: </li>
+      <li class="list-group-item temp">Temperature:<i class="fa-solid fa-temperature-half"></i> </li>
+      <li class="list-group-item description">Description: </li>
+      <li class="list-group-item humidity">Humidity: </li>
+      <li class="list-group-item wind">Wind: </li>
+    </ul>
+  </div>
 
 </section>
 
-<div id='map' style='width: 80vw; height: 50vh; margin: auto'></div>
 
-
-<!-- Display the 5-day forecast -->
-<div id="forecast" class="mt-3 text-center forecast-container"></div>
-
+<!-- *************************************************      Map-->
+<section>
+<div id='map' style='width: 80vw; height: 50vh; margin: auto' class=""></div>
+</section>
 
 
 
 <script src="js/keys.js"></script>
-<script src="js/mapbox_geocode_utilis.js"></script>
 <script src="js/weather_map.js"></script>
 
 
@@ -112,3 +130,8 @@
 
 </body>
 </html>
+
+
+
+
+

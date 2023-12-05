@@ -2,9 +2,6 @@
 
 
 
-
-
-
 mapboxgl.accessToken = MB_KEY;
 const map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -21,6 +18,11 @@ map.addControl(new mapboxgl.NavigationControl());
 const marker1 = new mapboxgl.Marker()
     .setLngLat([-98.4946, 29.4252])
     .addTo(map);
+
+
+
+
+
 
 // Function to perform geocoding using Mapbox API
 function geocode(query) {

@@ -1,5 +1,5 @@
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';// const WM_Key = "101eed49b4b45d7ace392a6ceedbc225"   apiKey
-const mapboxToken = 'YOUR_MAPBOX_API_KEY';// const MB_KEY = "pk.eyJ1Ijoic2FudG9zemxzMyIsImEiOiJjbHBscGFhc3MwMjJqMmtwZnNyNjhjcjJ4In0.3O5mZEOVSJdsV1uNIyitEw" Mapbox Token
+const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';// const WM_Key
+const mapboxToken = 'YOUR_MAPBOX_API_KEY';// const MB_KEY =
 
 // Function to get current weather conditions
 async function getCurrentWeather(city) {
@@ -21,19 +21,19 @@ async function getFiveDayForecast(city) {
     // Update the 'five-day-forecast' section on the page
 }
 
-// Function to initialize Mapbox map
-function initMap() {
-    mapboxgl.accessToken = mapboxToken;
-    const map = new mapboxgl.Map({
-        container: 'map-container',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 0], // Initial center coordinates
-        zoom: 1, // Initial zoom level
-    });
-
-    // Add functionality to drop a pin on the map and update forecast
-    // Add Mapbox Geocoding functionality for location search
-}
-
-// Initial call to get weather for your city
-getCurrentWeather('YourCityName');
+// // Function to initialize Mapbox map
+// function initMap() {
+//     mapboxgl.accessToken = mapboxToken;
+//     const map = new mapboxgl.Map({
+//         container: 'map-container',
+//         style: 'mapbox://styles/mapbox/streets-v11',
+//         center: [0, 0], // Initial center coordinates
+//         zoom: 1, // Initial zoom level
+//     });
+//
+//     // Add functionality to drop a pin on the map and update forecast
+//     // Add Mapbox Geocoding functionality for location search
+// }
+//
+// // Initial call to get weather for your city
+// getCurrentWeather('YourCityName');
