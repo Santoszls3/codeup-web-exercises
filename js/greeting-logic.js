@@ -1,7 +1,7 @@
 import {getRandomNumber} from "./number-utils.js";
 
 // Below is an array of greeting the control will randomly pull from
-export const greetings =
+const greetings =
     [
             "Hello",
             "Hi",

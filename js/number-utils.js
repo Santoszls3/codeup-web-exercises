@@ -5,6 +5,9 @@ export function getRandomNumber(max) {
 //  const randomNum = getRandomNumber();
 // console.log(randomNum);
 
+// can also do
+
+
 
 
 
