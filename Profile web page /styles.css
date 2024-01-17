@@ -1,0 +1,224 @@
+.font1 {
+    font-family: 'Font1', "Big Caslon"; /* Replace 'Font1' with the actual font you want to use */
+}
+
+.font2 {
+    font-family: 'Font2', "Arial Black" ; /* Replace 'Font2' with the actual font you want to use */
+    font-weight: bold;
+}
+
+.font3 {
+    font-family: 'Font3', "Montserrat"; /* Replace 'Font1' with the actual font you want to use */
+    font-weight: bold;
+
+}
+
+.font4 {
+    font-family: 'Font4', "Lora" ; /* Replace 'Font2' with the actual font you want to use */
+}
+
+/* General styles */
+.my-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: -45px;
+    margin-top: -5px;
+}
+
+.top-header {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.bottom-design {
+    text-align: right;
+    margin-top: -25px;
+    letter-spacing: 10px;
+}
+
+.with {
+    margin-top: -35px;
+    font-size: 1em;
+    text-align: center;
+    font-family: "Malayalam MN";
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Media query for extra-large screens (1200px and above) */
+@media only screen and (min-width: 1200px) {
+    .font1,
+    .font2,
+    .font3,
+    .font4 {
+        font-size: 10em;
+    }
+
+    .my-logo {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: -50px;
+        margin-top: -5px;
+    }
+
+    .image-container img {
+        max-height: 400px; /* Adjust the max height for extra-large screens */
+    }
+    .bottom-design {
+        letter-spacing: 15px;
+    }
+}
+
+/* Media query for large screens (992px - 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .font1,
+    .font2,
+    .font3,
+    .font4 {
+        font-size: 8.5em;
+    }
+
+    .my-logo {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: -20px;
+        margin-top: -5px;
+    }
+
+    .top-header {
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: -45px;
+    }
+
+    .bottom-design {
+        letter-spacing: 8px;
+    }
+
+    .with {
+        font-size: 1em;
+        text-align: center;
+        font-family: "Malayalam MN";
+        margin-top: -30px;
+    }
+
+    .image-container img {
+        max-height: 350px; /* Adjust the max height for large screens */
+    }
+
+    .bottom-design {
+        letter-spacing: 8px;
+    }
+}
+
+/* Media query for medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .font1,
+    .font2,
+    .font3,
+    .font4 {
+        font-size: 6.5em;
+    }
+
+    .my-logo {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: -30px;
+        margin-top: -5px;
+    }
+
+    .bottom-design {
+        letter-spacing: 5px;
+    }
+
+    .with {
+        font-size: 1em;
+        text-align: center;
+        font-family: "Malayalam MN";
+        margin-top: -20px;
+    }
+
+    .image-container img {
+        max-height: 300px; /* Adjust the max height for medium screens */
+    }
+
+    .bottom-design {
+        letter-spacing: 5px;
+    }
+}
+
+/* Media query for small screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .my-logo {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: -25px;
+        margin-top: -5px;
+    }
+
+    .font1,
+    .font2,
+    .font3,
+    .font4 {
+        font-size: 5em;
+    }
+
+    .top-header {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .bottom-design {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .with {
+        margin-top: -10px;
+    }
+
+    .image-container {
+        flex-direction: column;
+
+    }
+    .image-container img {
+        max-height: 350px; /* Adjust the max height for small screens */
+    }
+}
+
+}
+
+
+
+
+
+
+
+
