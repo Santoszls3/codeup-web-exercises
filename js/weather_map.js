@@ -8,8 +8,6 @@ const map = new mapboxgl.Map({
     zoom: 9
 });
 
-
-
 // Default Marker Initialization
 const marker = new mapboxgl.Marker({ draggable: true })
     .setLngLat([-98.4946, 29.4252])
@@ -38,6 +36,30 @@ function updateWeatherForecast(location) {
         });
 }
 
+
+// Event Listener for Marker Drag End
+marker.on('dragend', function () {
+    const lngLat = marker.getLngLat();
+    const location = `${lngLat.lat.toFixed(4)}, ${lngLat.lng.toFixed(4)}`;
+
+    // Fetch geocoding data to get city name for the dropped marker location
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lngLat.lng},${lngLat.lat}.json?access_token=${MB_KEY}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.features && data.features.length > 0) {
+                // Extract city from the first result
+                const city = data.features[0].context.find(c => c.id.includes('place')).text;
+
+                // Update weather forecast for the dropped marker location with city name
+                updateWeatherForecast(city);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching geocoding data:', error);
+        });
+});
+
+
 // Event Listener for Submitting Search Form
 document.getElementById('search-form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -61,9 +83,6 @@ document.getElementById('search-form').addEventListener('submit', function (even
             console.error('Error fetching geocoding data:', error);
         });
 });
-
-
-
 
 
 

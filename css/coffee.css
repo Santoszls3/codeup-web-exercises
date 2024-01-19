@@ -31,11 +31,13 @@
 }
 
 h2 {
+    font-family: "Montserrat";
     font-size: 5em;
     font-weight: bolder;
     text-align: center;
     color: black;
     background-color: rgba(255, 255, 255, .40);
+
 }
 
 h3 {
@@ -120,11 +122,13 @@ body section {
 }
 
 footer h1 {
-    font-family: 'Ephesis', cursive;
+    font-family: Montserrat;
+    font-weight: bold;
 }
 
 footer {
-    font-family: 'Unna', serif;
+    font-family: 'Ephesis', cursive;
+
     background-color: rgba(255, 255, 255, .40);
 }
 
