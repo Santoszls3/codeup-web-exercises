@@ -8,13 +8,13 @@
 }
 
 .font3 {
-    font-family: 'Font3', "Montserrat"; /* Replace 'Font1' with the actual font you want to use */
+    font-family: 'Font3', 'Montserrat'; /* Replace 'Font1' with the actual font you want to use */
     font-weight: bold;
 
 }
 
 .font4 {
-    font-family: 'Font4', "Lora" ; /* Replace 'Font2' with the actual font you want to use */
+    font-family: 'Font4', 'Lora'; /* Replace 'Font2' with the actual font you want to use */
 }
 
 /* General styles */
@@ -43,6 +43,7 @@
     font-size: 1em;
     text-align: center;
     font-family: "Malayalam MN";
+    color: black;
 }
 
 .image-container {
@@ -213,9 +214,81 @@
     }
 }
 
+/*Second ************************************** there was an extra } here not sure why it was here /
+
+/*Second **************************************/
+
+.hello-container {
+
+    background: url('black-gradient-background.jpg')center center no-repeat;
+    background-size: cover; /* Ensure the background covers the entire container */
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hello-container div {
+    width: 200px;
+    height: 200px;
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center both horizontally and vertically */
+}
+/* Add a class for the white text */
+.hello-container .white-text {
+    color: #ffffff; /* Set the text color to white */
+}
+.hello-paragraph {
+    color: white;
+    text-align: center;
+    margin-top: -100px; /* Adjust the margin as needed */
+}
+/* Media query for large screens (992px - 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hello-container {
+        width: 95%;
+    }
+
+    .hello-container div {
+        width: 150px;
+        height: 150px;
+        font-size: 4em;
+    }
 }
 
+/* Media query for medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hello-container {
+        width: 95%;
+    }
 
+    .hello-container div {
+        width: 120px;
+        height: 120px;
+        font-size: 3em;
+    }
+}
+
+/* Media query for small screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .hello-container {
+        width: 95%;
+    }
+
+    .hello-container div {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5em;
+    }
+}
+p {
+    color: white;
+    text-align: center;
+}
 
 
 
