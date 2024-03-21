@@ -449,3 +449,248 @@ try {
 } catch {
     console.log("error")
 }
+
+
+
+
+
+//************************************* New section the forEach Method *****************************
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,]
+function print(element) {
+    console.log(element)
+}
+// this will print the firs and second elements
+print(numbers[0])
+print(numbers[1])
+//instaed of this you can use a forEach
+numbers.forEach(print)
+// this will print all the numbers
+
+
+// this will only print even numbers:
+numbers.forEach(function (el){
+    if (el % 2 === 0){
+        console.log(el)
+    }
+})
+
+//************************************* MAP *****************************
+
+//It's time to get practice with the map method!
+//
+// Define a variable named firstNames and assign it to the result of mapping over the existing array, fullNames,
+// so that firstNames contains only the first names of the Harry Potter characters from the fullNames array.
+//
+// e.g.,
+//
+// console.log(firstNames); // ['Albus', 'Harry', 'Hermione', 'Ron', 'Rubeus', 'Minerva', 'Severus']
+//
+//
+// Please note:
+//
+// The fullNames array is an array of objects with each object containing properties for the
+// first and last names of each character. You may need to click the "Reset code" link if you do not see
+// the fullNames array pre-loaded into the exercise's index.js file.
+//
+// This exercise has been updated, you may see Q&A threads from this lecture that relate to the original
+// exercise which no longer exists. They can be ignored.
+
+const fullNames = [{first: 'Albus', last: 'Dumbledore'}, {first: 'Harry', last: 'Potter'},
+    {first: 'Hermione', last: 'Granger'}, {first: 'Ron', last: 'Weasley'}, {first: 'Rubeus', last: 'Hagrid'},
+    {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}];
+// SOLUTION #1:
+
+const firstNames = fullNames.map(function (name) {
+    return name.first;
+});
+// SOLUTION #2:
+//
+// // Arrow function syntax approach:
+// const firstNames = fullNames.map(name => name.first);
+
+//********************** arrow functions
+const adds = (x, y) => {
+    return x + y;
+}
+
+const squared = (x) => {
+    return x * x;
+}
+
+//Arrow Function Exercise
+// Write an arrow function expression called greet.  It should accept a single string argument,
+// a person's name.  It should return a greeting string as shown below:
+//
+// greet("Hagrid") //"Hey Hagrid!"
+// greet("Luna") //"Hey Luna!"
+// Be sure to use arrow function syntax!
+
+// SOLUTION #1:
+
+const greeter = (name) => {
+    return `Hey ${name}!`;
+}
+
+// SOLUTION #2:
+//
+// // More concise approach:
+// const greet = name => `Hey ${name}!`;
+
+const movies = [
+    {
+    title: 'Amadeus',
+    score: 99
+    },
+    {
+        title: 'Stand By Me',
+        score: 80
+    },
+    {
+        title: 'Dawn of the Dead',
+        score: 99
+    },
+    {
+        title: 'Parasite',
+        score: 75
+    },
+    {
+        title: 'Alien',
+        score: 90
+    },
+]
+
+// const favMovies = movies.map(function (movie){
+//     return `${movie.title} - ${movie.score / 10}`
+// })           // to rewrite this using arrow function***************
+
+const favMovies = movies.map(movie => (
+    `${movie.title} - ${movie.score / 10}`
+))
+
+//***********************
+// console.log("HELLO!!!"): This line simply prints "HELLO!!!" to the
+// when the code is executed. It's a common way to output messages or
+// for debugging purposes or to provide feedback to the user.
+//
+// setTimeout(() => { console.log("are you still there?") }, 3000):
+// This line sets up a timer using the setTimeout function.
+// The function takes two arguments: a callback function and a duration
+// milliseconds. After the specified duration (in this case, 3000 milliseconds or 3 seconds),
+// the callback function is executed, which logs "are you still there?" to the console.
+// This is often used to schedule a task to be executed once after a certain delay
+console.log("HELLO!!!")
+setTimeout(() => {
+    console.log("are you still there?")
+}, 3000)
+
+
+//******** setInterval
+
+let count = 0; // Variable to keep track of repetitions
+
+const intervalId = setInterval(() => {
+    console.log(Math.random());
+    count++; // Increment count after each repetition
+    if (count === 3) {
+        clearInterval(intervalId); // Clear the interval after 3 repetitions
+    }
+}, 2000);
+
+
+// In this modification, I introduced a count variable to keep track of the number
+// of repetitions. Inside the interval callback function, count is incremented by
+// 1 after each repetition. When count reaches 3, clearInterval(intervalId)
+// is called to stop the interval from executing further. The intervalId variable
+// stores the ID returned by setInterval, which is necessary for clearing the interval
+// later using clearInterval.
+
+
+
+//*************************************** FILTER
+
+const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,]
+myNumbers.filter(n => {
+    return n < 10
+})
+
+
+//Let's get some practice using the filter method. Write a function called
+// that accepts an array of usernames (strings).  It should return a new array,
+//
+// containing only the usernames that are less than 10 characters. For example:
+//
+// validUserNames(['mark', 'staceysmom1978', 'q29832128238983', 'carrie98', 'MoanaFan']);
+// // => ["mark", "carrie98", "MoanaFan"]
+function validUserNames(usernames) {
+    // your code here
+    return usernames.filter(name => name.length < 10);
+}
+
+//function validUserNames(usernames) {
+//   const filteredUsernames = arr.filter(function (name) {
+//     return name.length < 10;
+//   });
+//   return filteredUsernames;
+// }
+
+//****************
+//Define a function called allEvens that accepts a single array of numbers.
+// If the array contains all even numbers, return true.  Otherwise, return
+// false.  Use some or every to help you do this!  (only one of them is actually useful here)
+//
+// allEvens([2,4,6,8]) //true
+// allEvens([1,4,6,8]) //false
+// allEvens([1,2,3]) //false
+
+function allEvens(arr) {
+    return arr.every(function (num) {
+        return num % 2 === 0;
+    });
+}
+
+//SOLUTION #2:
+//
+// const allEvens = function (arr) {
+//   return arr.every(num => num % 2 === 0);
+// }
+// SOLUTION #3:
+//
+// // Concise full arrow function syntax approach:
+// const allEvens = arr => arr.every(num => num % 2 === 0);
+
+
+//***********************************************
+//Reduce:  provide a reducer function
+//
+const prices = [9.99, 1.50, 19.99, 49.50, 30.50];
+// let total = 0;
+// for (let price of prices) {
+//     total += price
+// }
+// console.log("your total is", total)
+// the above exp can be rewritten as a reduce
+const total = prices.reduce((total, price) => total + price)
+// the above will add everything togeter for  you
+
+const minPrice = prices.reduce((min, price) => {
+    if (price < min) {
+        return price;
+    }
+    return min;
+})
+
+//******************** Arrow functions
+const person = {
+    firstName: 'Viggo',
+    lastName: 'Mortenson',
+    fullName: function (){
+        return `${this.firstName} ${this.lastName}`
+    },
+    shoutName: function () {
+        setTimeout( ()=> {
+            console.log(this);
+            console.log(this.fullName())
+        }, 3000)
+    }
+}
