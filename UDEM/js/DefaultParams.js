@@ -140,4 +140,111 @@ const {email, firstName, lastName, city,} = user;
 //
 // </html>
 
-document.querySelector('#banner').id"banner"
+
+//Manipulating Attributes Practice
+// Let's get some practice working with DOM element attributes. I've provided you with some very basic
+// markup.  Please select the image element and:
+//
+// change its source to this url: https://devsprouthosting.com/images/chicken.jpg
+//
+// change its alt text to be "chicken"
+//@@@@@@@@@@@@@@@
+const eggImg = document.querySelector('img');
+eggImg.src = 'https://devsprouthosting.com/images/chicken.jpg';
+eggImg.alt = 'chicken';
+
+
+//****************************** i love trees
+//
+// Magical Forest Circle Exercise
+// I've provided you with some basic markup in index.html.  Please do not change
+// any of the markup directly.  Instead, use JavaScript to make the following changes:
+//
+// Select the div with the id of container.  Using JavaScript, set it's text
+// alignment to 'center';
+//
+// Select the image and use JavaScript to give it a width of 150px and a
+// radius of 50%
+//
+// Remember to use camelCased property names in JavaScript! (backgroundColor,
+// not background-color, etc.)
+
+
+
+const container = document.querySelector('#container');
+container.style.textAlign = 'center';
+
+const image = document.querySelector('#tree');
+image.style.width = '150px';
+image.style.borderRadius = '50%';
+
+
+//******************** Rainbow
+// I've provided you with an <h1> element which contains 7 individual ' +
+// 'spans (each holding a single letter).
+//
+// Please write some JavaScript to make them rainbow-colored!
+//
+//     In app.js you'll find an array of color names called colors.  ' +
+// 'It looks like: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'].
+//
+// Your task is to select all spans, iterate over them, and
+// assign them each one of the colors from the colors array.  The first span should
+// be red, the second should be orange, etc.   Your result should look like this:
+
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//PLEASE DON'T CHANGE THIS LINE!
+
+//YOU CODE GOES HERE:
+const spans = document.querySelectorAll('span');
+for (let i = 0; i < spans.length; i++){
+    spans[i].style.color = colors[i];
+}
+
+//******************************** highlight get Every other
+
+//In index.html, you'll find 6 <li> elements, two of which have the 'highlight' class applied to them.
+//
+// Please use JavaScript and the classList property to invert which elements have the highlight class.
+//
+// Basically iterate over all the <li> elements and toggle the class of 'highlight' on each one.
+// Your end result should look like this:
+
+const lis = document.querySelectorAll('li');
+
+for (let li of lis){
+    li.classList.toggle('highlight');
+}
+
+//SOLUTION #2 (app.js):
+//
+// const lis = document.querySelectorAll('li')
+//
+// for (let li of lis) {
+//   if (li.classList.contains('highlight')) {
+//     li.classList.remove('highlight');
+//   } else {
+//     li.classList.add('highlight');
+//   }
+// }
+
+
+//********************************************** 100 buttons
+// 100 Button Insanity Exercise
+// Without touching index.html, please use JavaScript to create exactly 100 new
+// button elements! Add each new button inside the container element provided in index.html.
+// Unfortunately, Udemy's exercise tool does not support to the append method, so you will
+// need to use appendChild.  Here are the steps:
+//
+// Create exactly 100 new button elements
+//
+// Each button must have some text inside of it (it doesn't matter what)
+//
+// Each button must be appended inside the container div.
+//
+const containerButtons = document.querySelector('#containerButtons');
+for (let i = 0; i < 100; i++) {
+    const btn = document.createElement('button');
+    btn.innerText = 'Slip';
+    containerButtons.appendChild(btn);
+}
