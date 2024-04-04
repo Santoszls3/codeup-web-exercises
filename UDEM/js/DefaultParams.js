@@ -248,3 +248,23 @@ for (let i = 0; i < 100; i++) {
     btn.innerText = 'Slip';
     containerButtons.appendChild(btn);
 }
+
+// *************************
+// Let's get some practice using addEventListener. I've provided you with two
+// buttons, each with an id: 'hello' and 'goodbye'.  Your goal is to add a click
+// listener to each button.
+//
+// When the hello button is clicked, you should console.log "hello"
+//
+// When the goodbye button is clicked, you should console.log "goodbye"
+
+const helloButton = document.querySelector('#hello');
+helloButton.addEventListener('click', function () {
+    console.log('hello');
+});
+
+
+document.querySelector('#goodbye').onclick =() => {
+    console.log("goodbye")
+
+}
