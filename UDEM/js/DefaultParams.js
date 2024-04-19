@@ -266,5 +266,9 @@ helloButton.addEventListener('click', function () {
 
 document.querySelector('#goodbye').onclick =() => {
     console.log("goodbye")
-
 }
+
+
+
+
+
