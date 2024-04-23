@@ -1,0 +1,44 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Adjust width as needed */
+    margin: auto;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.h4-border {
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.winner {
+    color: #4CAF50;      /* Green text color */
+    font-weight: bold;   /* Make the font bold */
+
+}
+
+.loser {
+    color: red;          /* Red text color */
+    font-weight: bold;   /* Make the font bold */
+
+}
