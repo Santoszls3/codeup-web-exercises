@@ -5,7 +5,8 @@
 //         numSides = 6
 //     }
 //     return Math.floor(Math.random() * numSides) + 1
-// } This is the old way of writing this, the new way is below
+// }
+// This is the old way of writing this, the new way is below
 
 function rollDie(numSides = 6) {
     return Math.floor(Math.random() * numSides) + 1
@@ -270,5 +271,89 @@ document.querySelector('#goodbye').onclick =() => {
 
 
 
+//************************************************************* promises
 
+
+// setTimeout(() => {
+// document.body.style.backgroundColor = 'yellow';
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = 'pink';
+//         setTimeout(() => {
+//             document.body.style.backgroundColor = 'red';
+//             setTimeout(() => {
+//                 document.body.style.backgroundColor = 'turquoise';
+//                 setTimeout(() => {
+//                     document.body.style.backgroundColor = 'dodger blue';
+//                 }, 3000)
+//             }, 3000)
+//         }, 3000)
+//     }, 3000)
+// }, 3000) the above can be changed to the colorChang const below to look cleaner
+
+// const colorChange = (newColor, delay, doNext) => {
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = newColor;
+//         doNext();
+//     }, delay)
+// }
+//  colorChange('dodgerblue', 1000,() => {
+//     colorChange('gold', 3000, () => {
+//         colorChange('teal', 3000, () => {
+//             colorChange('turquoise', 3000, ()=> {
+//                 colorChange('aqua', 3000, ()=> {
+//                     colorChange('fuchsia', 3000, () =>{
+//
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// });
+
+// can also do the above with promises
+// const delayedColorChanger = (color, delay) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             document.body.style.backgroundColor = color;
+//             resolve();
+//         }, delay)
+//     })
+// }
+//
+// delayedColorChanger('dodgerblue', 3000)
+//     .then(() => delayedColorChanger('gold', 3000))
+//     .then(() => delayedColorChanger('blue', 3000))
+//     .then(() => delayedColorChanger('teal', 3000))
+//     .then(() => delayedColorChanger('turquoise', 3000))
+//     .then(() => delayedColorChanger('aqua', 3000))
+//     .then(() => delayedColorChanger('fuchsia', 3000))
+//     .then(() => delayedColorChanger('indigo', 3000))
+
+
+// THe below will continue to change the color non stop
+
+const delayedColorChanger = (color, delay) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = color;
+            resolve();
+        }, delay);
+    });
+};
+
+const color = ['dodgerblue', 'gold', 'blue', 'teal', 'turquoise', 'aqua', 'fuchsia', 'indigo'];
+const delay = 10000;
+
+const colorChangeSequence = () => {
+    let promiseChain = Promise.resolve();
+    color.forEach(color => {
+        promiseChain = promiseChain.then(() => delayedColorChanger(color, delay));
+    });
+    return promiseChain.then(colorChangeSequence); // Repeat the sequence once it's done
+};
+
+colorChangeSequence(); // Start the color change sequence
+
+// **************************************************************** ASYNC FUNCTIONS
+// a newer and cleaner syntax for working with async code "promises"
 

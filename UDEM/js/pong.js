@@ -53,3 +53,24 @@ function reset(){
     p2Display.classList.remove('winner', 'loser');
 
 }
+
+
+//************************************
+const delayedColorChanges = (color, delay) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = color;
+            resolve();
+        }, delay)
+    })
+}
+async function rainbow() {
+    await delayedColorChanges('red', 5000)
+    await delayedColorChanges('orange', 5000)
+    await delayedColorChanges('yellow', 5000)
+    await delayedColorChanges('green', 5000)
+    await delayedColorChanges('blue', 5000)
+    await delayedColorChanges('indigo', 5000)
+    await delayedColorChanges('violet', 5000)
+}
+rainbow().then(() => console.log("END OF THE RAINBOW"))

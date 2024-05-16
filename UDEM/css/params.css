@@ -1,4 +1,10 @@
 /*No need to touch anything in this file:*/
+body {
+    transition: 1s background-color;
+}
+
+
+
 li {
     background-color: #B10DC9;
 }
