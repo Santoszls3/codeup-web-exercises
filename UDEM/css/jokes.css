@@ -1,0 +1,43 @@
+body {
+    background-color: deepskyblue;
+    text-align: center;
+    font-family: Montserrat;
+}
+h1 {
+    color: white;
+}
+
+/* jokes.css */
+
+/* Button Styles */
+.btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #003049;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #138496;
+}
+
+/* List Styles */
+#jokes {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+#jokes li {
+    color: white; /* White font color */
+    text-align: left; /* Align text to the left */
+    background-color: #333; /* Dark background for contrast */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px; /* Slight rounding for better appearance */
+    background-color: #333; /* Default background color */
+    color: #fff; /* Text color */
+}
