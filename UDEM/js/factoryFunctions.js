@@ -279,3 +279,9 @@ class dog extends Pet{
         return `${this.name} scarfs his food!`;
     }
 }
+
+// Tweet Sections
+var tweet = prompt('Write your Tweet:');
+var tweetCount = tweet.length;
+
+alert("You have written" + tweetCount + " characters, you have " + (140 - tweetCount) + " characters remaining. ")
