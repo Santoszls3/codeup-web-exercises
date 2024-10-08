@@ -1,0 +1,69 @@
+.image-container {
+    position: relative; /* Allows positioning of child elements */
+    text-align: center; /* Center the text */
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-credit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    z-index: 2;
+    font-size: .75em;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.text-background {
+    position: absolute; /* Position the rectangle absolutely */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    top: 28%; /* Adjust this value to position the rectangle vertically */
+
+    /* Adjust these properties to change the dimensions */
+    width: 65%; /* Adjust the width as needed */
+    height: 39%; /* Set to '35' to let height adjust based on content or specify a fixed height (e.g., '100px') */
+
+
+    padding: 20px; /* Add some padding for aesthetics */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    border-radius: 5px; /* Optional: add rounded corners */
+    z-index: 1; /* Ensure it is behind the text */
+
+
+}
+
+.designer, .developer {
+    position: absolute; /* Position the text absolutely within the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    color: white; /* Change text color for visibility */
+    z-index: 2; /* Ensure the text is above the rectangle */
+}
+
+
+
+.designer {
+    top: 25%; /* Adjust this value to position the "Designer" text */
+    font-size: 9em; /* Change the size as needed */
+    font-family: 'Montserrat', sans-serif; /* Ensure to include the correct font family */
+    font-weight: 400; /* Set font weight to normal */
+    letter-spacing: .03em; /* Increase letter spacing (adjust value as needed) */
+}
+
+.developer {
+    top: 45%; /* Adjust this value to position the "Developer" text */
+    font-size: 9.5em; /* Change the size as needed */
+    font-family: 'League Spartan', sans-serif; /* Ensure to include the correct font family */
+    font-weight: bolder; /* Set font weight to normal */
+
+
+}
+
+

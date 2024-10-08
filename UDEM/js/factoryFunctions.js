@@ -280,8 +280,18 @@ class dog extends Pet{
     }
 }
 
-// Tweet Sections
+// Tweet count Sections
 var tweet = prompt('Write your Tweet:');
-var tweetCount = tweet.length;
+// var tweetCount = tweet.length;
+var tweetUnder140 = tweet.slice(0,140);
 
-alert("You have written" + tweetCount + " characters, you have " + (140 - tweetCount) + " characters remaining. ")
+const name = prompt('What is your Name?');
+    const firstChar = name.slice(0,1);
+    const upperCaseFirstChar = firstChar.toUpperCase();
+    let restOfName = name.slice(1,name.length);
+    restOfName = restOfName.toLowerCase();
+    const capitalName = upperCaseFirstChar + restOfName;
+
+
+alert(tweetUnder140);
+alert('Hello, '  + capitalName);
