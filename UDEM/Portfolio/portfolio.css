@@ -1,12 +1,43 @@
-.image-container {
-    position: relative; /* Allows positioning of child elements */
-    text-align: center; /* Center the text */
+/* General Styles */
+nav {
+    margin: 0;
+    padding: 0;
+}
+nav, .image-container {
+    overflow: hidden;
+}
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove any padding */
 }
 
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.scrollingCards {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: sticky; /* Allows absolute positioning of children */
+    top: 0;
+}
+
+/* Card Styles */
+.card {
+    background-image: url('redStatueDT.jpg'); /* Ensure this URL is correct */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+    width: 100vw; /* Ensure the card takes full width */
+    height: 100vh; /* Ensure the card takes full height */
+    border-radius: 0; /* No rounded edges */
+    display: flex; /* Flexbox for inner content */
+    justify-content: center;
+    align-items: center;
+    position: sticky; /* Relative positioning for children */
+    top: 0;
+}
+
+.image-container {
+    position: relative; /* Required for positioning children absolutely */
+    width: 100%;
+    height: 100%;
 }
 
 .photo-credit {
@@ -15,55 +46,214 @@
     right: 10px;
     color: white;
     z-index: 2;
-    font-size: .75em;
+    font-size: 0.75em;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .text-background {
-    position: absolute; /* Position the rectangle absolutely */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    top: 28%; /* Adjust this value to position the rectangle vertically */
-
-    /* Adjust these properties to change the dimensions */
-    width: 65%; /* Adjust the width as needed */
-    height: 39%; /* Set to '35' to let height adjust based on content or specify a fixed height (e.g., '100px') */
-
-
-    padding: 20px; /* Add some padding for aesthetics */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-    border-radius: 5px; /* Optional: add rounded corners */
-    z-index: 1; /* Ensure it is behind the text */
-
-
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%; /* Adjust this for vertical positioning */
+    width: 800px; /* Set fixed width */
+    height: 300px; /* Set fixed height */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 1; /* Behind the text */
 }
 
+/* Designer and Developer Text Styling */
 .designer, .developer {
-    position: absolute; /* Position the text absolutely within the container */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    color: white; /* Change text color for visibility */
+    position: absolute;
     z-index: 2; /* Ensure the text is above the rectangle */
+    left: 50%;
+    transform: translateX(-50%);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0; /* Start invisible */
 }
-
-
 
 .designer {
-    top: 25%; /* Adjust this value to position the "Designer" text */
-    font-size: 9em; /* Change the size as needed */
-    font-family: 'Montserrat', sans-serif; /* Ensure to include the correct font family */
-    font-weight: 400; /* Set font weight to normal */
-    letter-spacing: .03em; /* Increase letter spacing (adjust value as needed) */
+    color: white;
+    top: .5%; /* Initial position */
+    font-size: 144px; /* Adjust font size */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    animation-name: dropDesigner; /* Call the animation */
 }
 
 .developer {
-    top: 45%; /* Adjust this value to position the "Developer" text */
-    font-size: 9.5em; /* Change the size as needed */
-    font-family: 'League Spartan', sans-serif; /* Ensure to include the correct font family */
-    font-weight: bolder; /* Set font weight to normal */
+    color: #f95126;
+    top: 45%; /* Initial position */
+    font-size: 150px; /* Adjust font size */
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bolder;
+    animation-name: dropDeveloper; /* Call the animation */
+}
 
+/* Designer Text Animation */
+@keyframes dropDesigner {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
 
+/* Developer Text Animation */
+@keyframes dropDeveloper {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+/* Second Section Content Styles */
+.second-section-content {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Second Card Layout */
+.second-card {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
 }
 
 
+/* Image Column */
+.profile-pic {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px; /* Spacing between the image and text */
+}
+
+/* Text Column */
+.text-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.santos, .gonzales {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 6em;
+    color: #333;
+    margin: 0;
+}
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.text-column h1 {
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 6em;
+    color: #000;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .designer {
+        font-size: 130px;
+    }
+    .developer {
+        font-size: 136px;
+    }
+    .profile-pic {
+        max-width: 40%;
+    }
+
+    .santos, .gonzales {
+        font-size: 4em;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        background-size: contain; /* Show the whole image without cropping */
+        background-position: center top; /* Adjust positioning */
+        background-repeat: no-repeat; /* Prevent tiling */
+        background-color: black; /* Fill the remaining space with black */
+        height: 60vh; /* Adjust the card height */
+    }
+
+    .second-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-background {
+        width: 575px;
+        height: 200px;
+    }
+
+    .designer {
+        font-size: 90px;
+    }
+    .developer {
+        font-size: 95px;
+    }
+
+    .profile-pic {
+        max-width: 100%;
+    }
+
+    .second-section-content {
+        padding: 10px;
+    }
+    .santos, .gonzales {
+        font-size: 3em;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    .card {
+        background-size: contain; /* Show the whole image without cropping */
+        background-position: center top; /* Adjust positioning */
+        background-repeat: no-repeat; /* Prevent tiling */
+        height: 60vh; /* Adjust the card height */
+    }
+
+    .text-background {
+        width: 100%; /* Full width on smaller screens */
+        height: 150px; /* Adjust height for smaller screens */
+    }
+
+    .designer {
+        font-size: 70px; /* Adjust font size for smaller screens */
+    }
+
+    .developer {
+        font-size: 75px; /* Adjust font size for smaller screens */
+    }
+
+    .profile-pic {
+        max-width: 80%; /* Slightly smaller on mobile */
+    }
+
+    .santos, .gonzales {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+}
