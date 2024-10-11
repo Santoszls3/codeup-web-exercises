@@ -3,9 +3,11 @@ nav {
     margin: 0;
     padding: 0;
 }
-nav, .image-container {
+
+.image-container {
     overflow: hidden;
 }
+
 body {
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove any padding */
@@ -43,14 +45,14 @@ body {
 .photo-credit {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 20px;
     color: white;
     z-index: 2;
-    font-size: 0.75em;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.text-background {
+.text-background{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -64,7 +66,8 @@ body {
 }
 
 /* Designer and Developer Text Styling */
-.designer, .developer {
+.designer,
+.developer {
     position: absolute;
     z-index: 2; /* Ensure the text is above the rectangle */
     left: 50%;
@@ -76,7 +79,7 @@ body {
 
 .designer {
     color: white;
-    top: .5%; /* Initial position */
+    top: 0.5%; /* Initial position */
     font-size: 144px; /* Adjust font size */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -117,61 +120,161 @@ body {
     }
 }
 
-/* Second Section Content Styles */
-.second-section-content {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #333;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
 
+
+/*********************************************************/
 /* Second Card Layout */
 .second-card {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    align-items: center; /* Center items vertically */
-    padding: 20px;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+
 }
 
+.top-row {
+    display: flex;
+    width: 100%; /* Ensure it takes the full width */
+}
 
-/* Image Column */
+.image-column {
+    flex: 0 0 25%; /* Set width to 25% */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5em;
+}
+
 .profile-pic {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
-    margin-right: 20px; /* Spacing between the image and text */
+    border: 3px solid white; /* Add a white border */
 }
 
-/* Text Column */
 .text-column {
+    flex: 0 0 75%; /* Set width to 75% */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    padding-left: 20px;
+    padding-top: 5em;
 }
 
-.santos, .gonzales {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 6em;
-    color: #333;
+.santos {
+    color: #f95126;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7em;
+    font-weight: normal;
     margin: 0;
+    line-height: .8em;
 }
+
+.gonzales {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 7.5em;
+    margin: 0;
+    margin-top: -10px;
+}
+
+/* Description Styling */
+.about-me-background {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Set fixed width */
+    height: 200px; /* Set fixed height */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 1; /* Behind the text */
+    bottom: 5em;
+
+.about-me {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: left; /* Align text to center */
+    width: 100%; /* Ensure description spans full width */
+    padding: 10px; /* Add some padding for better spacing */
+
+}
+
+
+
+/*********************************************************/
+/* Third Card Layout */
+.second-card {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+}
+
+.top-row {
+    display: flex;
+    width: 100%; /* Ensure it takes the full width */
+}
+
+.image-column {
+    flex: 0 0 25%; /* Set width to 25% */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-pic {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-column {
+    flex: 0 0 75%; /* Set width to 75% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.santos {
+    color: #f95126;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7em;
+    margin: 0;
+    line-height: .8em;
+}
+
+.gonzales {
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bolder;
+    font-size: 7em;
+    margin: 0;
+    margin-top: -10px;
+}
+
+/* Description Styling */
+.description-row {
+    width: 100%; /* Full width */
+    margin-top: 10px; /* Space between text and description */
+}
+
 .description {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25em;
-    color: #666;
-    margin-top: 10px;
+    color: white;
+    text-align: center; /* Align text to center */
+    width: 100%; /* Ensure description spans full width */
+    padding: 10px; /* Add some padding for better spacing */
 }
 
-.text-column h1 {
-    margin: 0;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 6em;
-    color: #000;
-}
 
-/* Media Queries */
+
+/******************************* Media Queries */
 @media (max-width: 1024px) {
     .designer {
         font-size: 130px;
@@ -183,7 +286,8 @@ body {
         max-width: 40%;
     }
 
-    .santos, .gonzales {
+    .santos,
+    .gonzales {
         font-size: 4em;
     }
 }
@@ -198,10 +302,7 @@ body {
         height: 60vh; /* Adjust the card height */
     }
 
-    .second-card {
-        flex-direction: column;
-        align-items: center;
-    }
+
 
     .text-background {
         width: 575px;
@@ -222,7 +323,8 @@ body {
     .second-section-content {
         padding: 10px;
     }
-    .santos, .gonzales {
+    .santos,
+    .gonzales {
         font-size: 3em;
     }
 }
@@ -253,7 +355,9 @@ body {
         max-width: 80%; /* Slightly smaller on mobile */
     }
 
-    .santos, .gonzales {
+    .santos,
+    .gonzales {
         font-size: 2.5em; /* Adjust font size for smaller screens */
     }
 }
+
