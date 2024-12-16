@@ -1,0 +1,46 @@
+element.style {
+}
+.portfolio-picture {
+    height: 22rem;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em +0.5rem);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+user agent stylesheet
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.portfolio-link {
+    text-decoration: none;
+    color: black;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --blue: #2662fa;
+    --orange: #ff5c33;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}

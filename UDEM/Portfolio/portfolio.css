@@ -1,43 +1,38 @@
 /* General Styles */
-nav {
+body, nav {
     margin: 0;
     padding: 0;
-}
-
-.image-container {
-    overflow: hidden;
-}
-
-body {
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove any padding */
+    box-sizing: border-box;
 }
 
 .scrollingCards {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: sticky; /* Allows absolute positioning of children */
-    top: 0;
 }
 
-/* Card Styles */
+/* Card Layout */
 .card {
-    background-image: url('redStatueDT.jpg'); /* Ensure this URL is correct */
-    background-size: cover; /* Cover the entire card */
-    background-position: center; /* Center the image */
-    width: 100vw; /* Ensure the card takes full width */
-    height: 100vh; /* Ensure the card takes full height */
-    border-radius: 0; /* No rounded edges */
-    display: flex; /* Flexbox for inner content */
+    background-image: url('redStatueDT.jpg'); /* Ensure the image URL is correct */
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky; /* Relative positioning for children */
+    position: relative;
+}
+
+.card:first-child {
+    position: sticky;
     top: 0;
 }
 
+/* Content Styling */
 .image-container {
-    position: relative; /* Required for positioning children absolutely */
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -47,56 +42,52 @@ body {
     top: 10px;
     right: 20px;
     color: white;
-    z-index: 2;
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.text-background{
+.text-background {
     position: absolute;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    top: 30%; /* Adjust this for vertical positioning */
-    width: 800px; /* Set fixed width */
-    height: 300px; /* Set fixed height */
-    padding: 20px;
+    width: 800px;
+    height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    z-index: 1; /* Behind the text */
+    padding: 20px;
+    z-index: 1;
 }
 
-/* Designer and Developer Text Styling */
-.designer,
-.developer {
+/* Text Animation */
+.designer, .developer {
     position: absolute;
-    z-index: 2; /* Ensure the text is above the rectangle */
+    z-index: 2;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    opacity: 0; /* Start invisible */
 }
 
 .designer {
     color: white;
-    top: 0.5%; /* Initial position */
-    font-size: 144px; /* Adjust font size */
+    top: 0.5%;
+    font-size: 144px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    animation-name: dropDesigner; /* Call the animation */
+    font-weight: normal;
+    animation-name: dropDesigner;
 }
 
 .developer {
     color: #f95126;
-    top: 45%; /* Initial position */
-    font-size: 150px; /* Adjust font size */
+    top: 45%;
+    font-size: 150px;
     font-family: 'League Spartan', sans-serif;
     font-weight: bolder;
-    animation-name: dropDeveloper; /* Call the animation */
+    animation-name: dropDeveloper;
 }
 
-/* Designer Text Animation */
 @keyframes dropDesigner {
     0% {
         transform: translateX(-100vw);
@@ -108,7 +99,6 @@ body {
     }
 }
 
-/* Developer Text Animation */
 @keyframes dropDeveloper {
     0% {
         transform: translateX(100vw);
@@ -120,41 +110,48 @@ body {
     }
 }
 
-
-
-/*********************************************************/
 /* Second Card Layout */
 .second-card {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 40px;
     width: 100%;
+    position: relative;
+}
 
+.secondCardBackground {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100.5%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
 }
 
 .top-row {
     display: flex;
-    width: 100%; /* Ensure it takes the full width */
+    width: 100%;
 }
 
 .image-column {
-    flex: 0 0 25%; /* Set width to 25% */
+    flex: 0 0 25%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 5em;
 }
 
 .profile-pic {
     max-width: 100%;
     height: auto;
-    border: 3px solid white; /* Add a white border */
+    border: 3px solid white;
 }
 
 .text-column {
-    flex: 0 0 75%; /* Set width to 75% */
+    flex: 0 0 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,196 +165,188 @@ body {
     font-size: 7em;
     font-weight: normal;
     margin: 0;
-    line-height: .8em;
+    line-height: 1em;
 }
 
 .gonzales {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-    font-size: 7.5em;
+    font-size: 7em;
     margin: 0;
-    margin-top: -10px;
 }
 
-/* Description Styling */
-.about-me-background {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Set fixed width */
-    height: 200px; /* Set fixed height */
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    z-index: 1; /* Behind the text */
-    bottom: 5em;
+.description-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 2em;
+}
 
 .about-me {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
     color: white;
-    text-align: left; /* Align text to center */
-    width: 100%; /* Ensure description spans full width */
-    padding: 10px; /* Add some padding for better spacing */
-
+    font-size: 1.5em;
 }
 
 
-
-/*********************************************************/
 /* Third Card Layout */
-.second-card {
+.third-card {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 40px;
     width: 100%;
 }
 
-.top-row {
-    display: flex;
-    width: 100%; /* Ensure it takes the full width */
+.previousProjects-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100.5%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 0;
 }
 
-.image-column {
-    flex: 0 0 25%; /* Set width to 25% */
+.text-row {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.profile-pic {
-    max-width: 100%;
-    height: auto;
-}
-
-.text-column {
-    flex: 0 0 75%; /* Set width to 75% */
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding-left: 20px;
+    width: 100%;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    padding-bottom: 40px;
 }
 
-.santos {
-    color: #f95126;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 7em;
-    margin: 0;
-    line-height: .8em;
-}
-
-.gonzales {
+.previous {
     color: white;
     font-family: 'League Spartan', sans-serif;
+    font-size: 105px;
     font-weight: bolder;
-    font-size: 7em;
     margin: 0;
-    margin-top: -10px;
 }
 
-/* Description Styling */
-.description-row {
-    width: 100%; /* Full width */
-    margin-top: 10px; /* Space between text and description */
-}
-
-.description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25em;
-    color: white;
-    text-align: center; /* Align text to center */
-    width: 100%; /* Ensure description spans full width */
-    padding: 10px; /* Add some padding for better spacing */
+.projects {
+    color: #f95126;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 105px;
+    font-weight: bolder;
+    margin: 0;
 }
 
 
+/*carousel*/
 
-/******************************* Media Queries */
-@media (max-width: 1024px) {
-    .designer {
-        font-size: 130px;
-    }
-    .developer {
-        font-size: 136px;
-    }
-    .profile-pic {
-        max-width: 40%;
-    }
-
-    .santos,
-    .gonzales {
-        font-size: 4em;
-    }
+.carousel {
+    position: relative; /* Position relative to ensure layering */
+    z-index: 1; /* Ensure carousel appears above the background */
+    margin-top: 120px; /* Adjust this value to position the carousel below the text */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .card {
-        background-size: contain; /* Show the whole image without cropping */
-        background-position: center top; /* Adjust positioning */
-        background-repeat: no-repeat; /* Prevent tiling */
-        background-color: black; /* Fill the remaining space with black */
-        height: 60vh; /* Adjust the card height */
+.carousel-item img {
+    width: 500px; /* Adjust this percentage to control the image width */
+    height: 500px; /* Ensure the image maintains its aspect ratio */
+    object-fit: cover; /* Optional: Use this if you want the images to fill the container without distorting */
+
+    /* Center the carousel container on the page */
+    .bd-example {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove any default margins */
+    }
+
+    /* Center the carousel items */
+    .carousel-inner {
+        display: flex;
+        justify-content: center;  /* Horizontally center the items */
+        align-items: center;      /* Vertically center the items */
+    }
+
+    /* Control the size of the images */
+    .carousel-item img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the image fits within the container */
+        margin: 0 auto; /* Center the image inside the carousel item */
     }
 
 
 
-    .text-background {
-        width: 575px;
-        height: 200px;
+    /* Footer */
+
+    .footer {
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'Montserrat', sans-serif;
     }
 
-    .designer {
-        font-size: 90px;
-    }
-    .developer {
-        font-size: 95px;
+    .footer a {
+        color: #f95126;
+        text-decoration: none;
     }
 
-    .profile-pic {
-        max-width: 100%;
+    .footer a:hover {
+        text-decoration: underline;
     }
 
-    .second-section-content {
-        padding: 10px;
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .second-card, .third-card {
+            padding: 20px;
+        }
+
+        .image-column, .text-column {
+            flex: 1 1 100%;
+            padding-left: 0;
+        }
+
+        .santos, .gonzales {
+            font-size: 4em;
+        }
+
+        .about-me {
+            font-size: 1.2em;
+        }
+
+        .projects {
+            font-size: 2em;
+        }
+
+        .designer, .developer {
+            font-size: 5em;
+        }
+
+        .photo-credit {
+            font-size: 8px;
+        }
     }
-    .santos,
-    .gonzales {
-        font-size: 3em;
+
+    @media (max-width: 480px) {
+        .designer, .developer {
+            font-size: 4em;
+        }
+
+        .santos, .gonzales {
+            font-size: 3em;
+        }
+
+        .about-me {
+            font-size: 1em;
+        }
+
+        .projects {
+            font-size: 1.8em;
+        }
+
+        .photo-credit {
+            font-size: 6px;
+        }
     }
 }
-
-/* Media Queries */
-@media (max-width: 480px) {
-    .card {
-        background-size: contain; /* Show the whole image without cropping */
-        background-position: center top; /* Adjust positioning */
-        background-repeat: no-repeat; /* Prevent tiling */
-        height: 60vh; /* Adjust the card height */
-    }
-
-    .text-background {
-        width: 100%; /* Full width on smaller screens */
-        height: 150px; /* Adjust height for smaller screens */
-    }
-
-    .designer {
-        font-size: 70px; /* Adjust font size for smaller screens */
-    }
-
-    .developer {
-        font-size: 75px; /* Adjust font size for smaller screens */
-    }
-
-    .profile-pic {
-        max-width: 80%; /* Slightly smaller on mobile */
-    }
-
-    .santos,
-    .gonzales {
-        font-size: 2.5em; /* Adjust font size for smaller screens */
-    }
-}
-
