@@ -1,8 +1,27 @@
 /* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+.main-content {
+    min-height: 100vh;
+}
+
+.footer {
+    position: relative; /* or absolute */
+    bottom: 0;
+    width: 100vw;
+}
+.footer, .last-element {
+    margin-bottom: 0;
+}
 body, nav {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 100vw;
 }
 
 .scrollingCards {
@@ -144,8 +163,8 @@ body, nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 10px;  /* Add 10px padding to the left */
-    padding-top: 10px;
+    padding-left: 20px;  /* Add 10px padding to the left */
+    padding-top: 50px;
 }
 
 /* Image scaling with viewport width (vw) */
@@ -175,6 +194,7 @@ body, nav {
     margin: 0;
 }
 
+/*text at the top of the page "Santos GonzalesIII" adjust on the page for layout*/
 .text-column {
     flex: 0 0 75%;
     display: flex;
@@ -183,15 +203,17 @@ body, nav {
     padding-left: 20px;
     padding-top: 5em;
 }
+
+/* Adjust about me section */
 .description-row {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    padding-left: 10px;
-}
+    padding: 2em 60px 1em 20px; /* padding goes clockwise "TOP, RIGHT, BOTTOM, LEFT"*/
+    /*padding-top: 2em; padding-right: 60px; padding-bottom: 1em; padding-left: 10px;*/
 
+}
+/* About me text styling */
 .about-me {
     color: white;
     font-size: 1.5em;
