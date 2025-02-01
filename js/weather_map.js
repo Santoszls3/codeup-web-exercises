@@ -8,6 +8,13 @@ const map = new mapboxgl.Map({
     zoom: 9
 });
 
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2FudG9zemxzMyIsImEiOiJjbHBscGFhc3MwMjJqMmtwZnNyNjhjcjJ4In0.3O5mZEOVSJdsV1uNIyitEw';
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    center: [-74.5, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+    zoom: 9 // starting zoom
+});
+
 // Default Marker Initialization
 const marker = new mapboxgl.Marker({ draggable: true })
     .setLngLat([-98.4946, 29.4252])

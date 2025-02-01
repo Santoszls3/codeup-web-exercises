@@ -25,6 +25,8 @@ body, nav {
     position: relative;
 }
 
+
+
 .card:first-child {
     position: sticky;
     top: 0;
@@ -73,7 +75,7 @@ body, nav {
 .designer {
     color: white;
     top: 0.5%;
-    font-size: 144px;
+    font-size: 149px;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     animation-name: dropDesigner;
@@ -110,7 +112,7 @@ body, nav {
     }
 }
 
-/* Second Card Layout */
+/**************** Second Card Layout  Page 2 ***************/
 .second-card {
     display: flex;
     flex-direction: column;
@@ -142,12 +144,35 @@ body, nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 10px;  /* Add 10px padding to the left */
+    padding-top: 10px;
 }
 
+/* Image scaling with viewport width (vw) */
 .profile-pic {
-    max-width: 100%;
-    height: auto;
+    max-width: 30vw; /* Image width will be 30% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
     border: 3px solid white;
+}
+
+
+
+/* Text scaling with viewport width (vw) */
+.santos {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9vw; /* Text size will be 6% of the viewport width */
+    color: #f95126;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0;
+}
+
+.gonzales {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9vw; /* Text size will be 6% of the viewport width */
+    color: white;
+    font-weight: bolder;
+    margin: 0;
 }
 
 .text-column {
@@ -158,29 +183,13 @@ body, nav {
     padding-left: 20px;
     padding-top: 5em;
 }
-
-.santos {
-    color: #f95126;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 7em;
-    font-weight: normal;
-    margin: 0;
-    line-height: 1em;
-}
-
-.gonzales {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    font-size: 7em;
-    margin: 0;
-}
-
 .description-row {
     display: flex;
     width: 100%;
     justify-content: center;
     padding-top: 2em;
+    padding-bottom: 1em;
+    padding-left: 10px;
 }
 
 .about-me {
@@ -189,7 +198,130 @@ body, nav {
 }
 
 
-/* Third Card Layout */
+/********************************* Third Card Layout */
+/*.third-card {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    padding: 40px;*/
+/*    width: 100%;*/
+/*}*/
+
+.thirdCardBackground {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100.5%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+/* to adjust text at the top of the page, "previousProjects */
+.text-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 30px; /* Adjust this value to move text up */
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.previous {
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 10vw; /* Text size will be 6% of the viewport width */
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.projects {
+    color: #f95126;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 10vw; /* Text size will be 6% of the viewport width */
+    font-weight: bolder;
+    margin: 0;
+}
+
+
+
+
+/* Carousel container */
+.carousel {
+    position: relative;
+    z-index: 1;
+    margin-top: 150px; /* Reduce this value to move it higher */
+    width: 100%; /* Ensure full width */
+    max-width: 1200px; /* set a fix height for the carousel */
+    height: auto;
+    margin-left: auto; /* Center it horizontally */
+    margin-right: auto; /* Center it horizontally */
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Ensure carousel takes full width */
+.carousel-inner {
+    display: flex;
+    width: 100%; /* Ensure it spans the full screen */
+    height: 100%; /* Ensure it span the full height of the container*/
+}
+
+/* Ensure each carousel item takes the full width */
+.carousel-item {
+    width: 100%;
+    text-align: center; /* Center content */
+}
+
+/* Carousel images */
+.carousel-item img {
+    width: 100%; /* Set full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill space properly */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center the entire carousel container */
+.bd-example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; /* Full width */
+    margin: 0;
+}
+/* Remove Bootstrap's default caption positioning */
+.carousel-caption {
+    position: static; /* Remove absolute positioning */
+    text-align: center; /* Center text */
+    padding-top: 10px; /* Add spacing from image */
+}
+
+/* Ensure the new caption container appears below the image */
+.carousel-caption-container {
+    text-align: center;
+    padding-top: 15px; /* Add space below the image */
+    width: 100%;
+    color: white; /* text color */
+    padding: 10px 0; /* Add padding for better readability */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+/* Change the color of the previous arrow */
+.carousel-control-prev-icon {
+    filter: invert(100%); /* Makes the arrow white */
+    transform: scale(1.5); /* Makes the arrow 1.5x bigger */
+}
+
+/* Change the color of the next arrow */
+.carousel-control-next-icon {
+    filter: invert(100%); /* Makes the arrow white */
+    transform: scale(1.5); /* Makes the arrow 1.5x bigger */
+}
+
 .third-card {
     display: flex;
     flex-direction: column;
@@ -197,9 +329,50 @@ body, nav {
     align-items: center;
     padding: 40px;
     width: 100%;
+    margin: 0 auto; /* Center the card horizontally */
+    position: relative;
+    min-height: 600px; /* Ensure the card has a minimum height */
 }
 
-.previousProjects-background {
+
+/* Make headings responsive */
+.third-card h5 {
+    font-size: 2vw; /* Make it scale with screen size */
+    margin-bottom: 15px;
+}
+
+/******************* Card Four ****************/
+
+.letsWork {
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 10vw; /* Text size will be % of the viewport width */
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.creatSomething {
+    text-align: center;
+    color: #f95126;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 10vw; /* Text size will be % of the viewport width */
+    font-weight: bolder;
+    margin: 0;
+}
+
+.fourth-card {
+    position: relative; /* Ensure it's positioned normally */
+    width: 100vw;
+    min-height: 100vh; /* Ensure it takes up full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents content from spilling over */
+    text-align: center;
+}
+
+.letsWorkTogetherBackground {
     position: absolute;
     top: 0;
     left: 50%;
@@ -210,143 +383,117 @@ body, nav {
     z-index: 0;
 }
 
-.text-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    top: 50px;
-    text-align: center;
-    padding-bottom: 40px;
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.previous {
+.letsWork, .creatSomething {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+
+
+/**************************************/
+
+/* Footer */
+
+.footer {
+    background-color: #222;
     color: white;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 105px;
-    font-weight: bolder;
-    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.projects {
+.footer a {
     color: #f95126;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 105px;
-    font-weight: bolder;
-    margin: 0;
+    text-decoration: none;
 }
 
-
-/*carousel*/
-
-.carousel {
-    position: relative; /* Position relative to ensure layering */
-    z-index: 1; /* Ensure carousel appears above the background */
-    margin-top: 120px; /* Adjust this value to position the carousel below the text */
+.footer a:hover {
+    text-decoration: underline;
 }
 
-.carousel-item img {
-    width: 500px; /* Adjust this percentage to control the image width */
-    height: 500px; /* Ensure the image maintains its aspect ratio */
-    object-fit: cover; /* Optional: Use this if you want the images to fill the container without distorting */
+/*********************************************/
+/* Media Queries for Responsiveness */
 
-    /* Center the carousel container on the page */
-    .bd-example {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full viewport height */
-        margin: 0; /* Remove any default margins */
+
+
+@media (max-width: 768px) {
+    /*.second-card, .third-card {*/
+    /*    padding: 20px;*/
+    /*}*/
+
+    /*.image-column, .text-column {*/
+    /*    flex: 1 1 100%;*/
+    /*    padding-left: 0;*/
+    /*}*/
+
+    /*.santos, .gonzales {*/
+    /*    font-size: 4em;*/
+    /*}*/
+
+    .about-me {
+        font-size: 1.2em;
     }
 
-    /* Center the carousel items */
-    .carousel-inner {
-        display: flex;
-        justify-content: center;  /* Horizontally center the items */
-        align-items: center;      /* Vertically center the items */
+    /*.projects {*/
+    /*    font-size: 2em;*/
+    /*}*/
+
+    .designer {
+        /*font-size: 7.5em;*/
+
     }
 
-    /* Control the size of the images */
-    .carousel-item img {
-        max-width: 100%; /* Ensure the image doesn't overflow */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure the image fits within the container */
-        margin: 0 auto; /* Center the image inside the carousel item */
+    .developer {
+        /*font-size: 7.5em;*/
+        top: calc(40% + 15px); /* Moves it 20px lower while staying close */
     }
 
+    .text-background {
+        width: 650px;
+        height: 250px;
+    }
 
+    .photo-credit {
+        font-size: 8px;
+    }
 
-    /* Footer */
+    .third-card h5 {
+        /*font-size: 6vw; !* Adjust for smaller devices *!*/
+    }
 
-    .footer {
-        background-color: #222;
-        color: white;
-        padding: 20px;
-        text-align: center;
+}
+
+@media (max-width: 480px) {
+    .designer, .developer {
+        font-size: 4em;
+    }
+
+    /*.santos, .gonzales {*/
+    /*    font-size: 3em;*/
+    /*}*/
+
+    .about-me {
         font-size: 1em;
-        font-family: 'Montserrat', sans-serif;
     }
 
-    .footer a {
-        color: #f95126;
-        text-decoration: none;
-    }
+    /*.projects {*/
+    /*    font-size: 1.8em;*/
+    /*}*/
 
-    .footer a:hover {
-        text-decoration: underline;
-    }
-
-    /* Media Queries for Responsiveness */
-    @media (max-width: 768px) {
-        .second-card, .third-card {
-            padding: 20px;
-        }
-
-        .image-column, .text-column {
-            flex: 1 1 100%;
-            padding-left: 0;
-        }
-
-        .santos, .gonzales {
-            font-size: 4em;
-        }
-
-        .about-me {
-            font-size: 1.2em;
-        }
-
-        .projects {
-            font-size: 2em;
-        }
-
-        .designer, .developer {
-            font-size: 5em;
-        }
-
-        .photo-credit {
-            font-size: 8px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .designer, .developer {
-            font-size: 4em;
-        }
-
-        .santos, .gonzales {
-            font-size: 3em;
-        }
-
-        .about-me {
-            font-size: 1em;
-        }
-
-        .projects {
-            font-size: 1.8em;
-        }
-
-        .photo-credit {
-            font-size: 6px;
-        }
+    .photo-credit {
+        font-size: 6px;
     }
 }
