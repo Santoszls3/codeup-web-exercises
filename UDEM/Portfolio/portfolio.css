@@ -3,10 +3,16 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-x: hidden;  /* Keep this to prevent horizontal scroll */
+    overflow-y: auto;    /* Allow vertical scrolling when content exceeds the viewport */
 }
+
 .main-content {
     min-height: 100vh;
+}
+
+body {
+    overflow-y: auto;  /* Ensures content can scroll vertically if it overflows */
 }
 
 .footer {
@@ -147,7 +153,7 @@ body, nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 100.5%;
     height: 100.5%;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 1;
@@ -235,7 +241,7 @@ body, nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 100.5%;
     height: 100.5%;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 1;
@@ -276,12 +282,11 @@ body, nav {
     position: relative;
     z-index: 1;
     margin-top: 150px; /* Reduce this value to move it higher */
-    width: 100%; /* Ensure full width */
-    max-width: 1200px; /* set a fix height for the carousel */
+    width: 70vw; /* Ensure full width */
+    max-width: 1100px; /* set a fix height for the carousel */
     height: auto;
     margin-left: auto; /* Center it horizontally */
     margin-right: auto; /* Center it horizontally */
-    overflow: hidden; /* Prevents overflow */
 }
 
 /* Ensure carousel takes full width */
@@ -365,6 +370,10 @@ body, nav {
 
 /******************* Card Four ****************/
 
+.letsWorkText-column {
+    margin-bottom: 50px;
+}
+
 .letsWork {
     color: white;
     font-family: 'League Spartan', sans-serif;
@@ -399,12 +408,11 @@ body, nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 100.5%;
     height: 100.5%;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 0;
 }
-
 
 
 @keyframes fadeIn {

@@ -1,0 +1,102 @@
+a {
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        font-weight: bold;
+        color: blue;
+        background-color: lightgrey;
+        padding: 30px;
+        margin: auto;
+        width: 339px;
+
+}
+
+.skip{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border: solid;
+    border-color: darkgrey;
+    background-color: powderblue;
+    display: flex;
+    padding: 30px;
+    margin: auto;
+    width: 339px;
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+li{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.header-img{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width:768px) {
+
+ .skip{
+     display: none;
+ }
+
+    a {
+        display: flex;
+        justify-content: space-evenly;
+        font-weight: bold;
+        width: 60px;
+        color: blue;
+        background-color: #ffffff;
+    }
+
+  .nav-links{
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: flex-end;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+  h1{
+      display: flex;
+      justify-content: flex-start;
+  }
+
+  .mon{
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+  /*below pushes the paragraphs in column after surpassing our set (min-width) value.
+   that margin of 1% keeps paragraphs from intercepting, width 48% allows column (*main* and *sub-section*) from touching*/
+  .main, .sub-section{
+      width: 48%;
+      float: left;
+      margin: 1%;
+      box-sizing: border-box;
+  }
+  footer{
+      position: absolute;
+      bottom: 11px;
+  }
+}
+

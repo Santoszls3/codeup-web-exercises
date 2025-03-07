@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "title": "Pulse",
+      "rating": "2 Star",
+      "id": "ZgR0lI8",
+      "genre": "comedy"
+    },
+    {
+      "title": "Dawn of the Dead",
+      "rating": "5 Star",
+      "genre": "Horror",
+      "id": "yYfnDk-"
+    },
+    {
+      "title": "Pulse",
+      "rating": "2 Star",
+      "id": "SdJm6q6",
+      "genre": ""
+    },
+    {
+      "title": "Sleep walkers",
+      "rating": "4 Star",
+      "genre": "horror",
+      "id": "Z-xeHNM"
+    },
+    {
+      "title": "The Meg",
+      "rating": "3 Star",
+      "genre": "horor",
+      "id": "PebK8VO"
+    }
+  ]
+}
